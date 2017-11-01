@@ -1,6 +1,7 @@
 ---
 title: 前端开发环境构建－sublime
 slug: qian-duan-kai-fa-huan-jing-gou-jian-sublime
+tags: "前端"
 date_published: 2017-10-18T06:40:56.000Z
 date_updated:   2017-10-18T06:40:56.000Z
 ---

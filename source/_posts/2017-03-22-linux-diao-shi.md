@@ -1,6 +1,7 @@
 ---
 title: linux 调试
 slug: linux-diao-shi
+tags: "运维"
 date_published: 2017-03-22T04:21:11.000Z
 date_updated:   2017-03-22T05:14:31.000Z
 ---
