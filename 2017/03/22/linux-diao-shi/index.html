@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.daozzg.com">
   <title>linux 调试 | 朱争光</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,7 +15,8 @@
 <meta property="og:url" content="http://www.daozzg.com/2017/03/22/linux-diao-shi/index.html">
 <meta property="og:site_name" content="朱争光">
 <meta property="og:description" content="##stace ##losflosf是一个列出当前系统打开文件的工具123456789101112131415lsof abc.txt 显示开启文件abc.txt的进程lsof -c abc 显示abc进程现在打开的文件lsof -c -p 1234 列出进程号为1234的进程所打开的文件lsof -g gid 显示归属gid的进程情况lsof +d /usr/local/ 显示目录下被进程开启的">
-<meta property="og:updated_time" content="2017-11-01T15:56:00.000Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-30T02:36:16.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 调试">
 <meta name="twitter:description" content="##stace ##losflosf是一个列出当前系统打开文件的工具123456789101112131415lsof abc.txt 显示开启文件abc.txt的进程lsof -c abc 显示abc进程现在打开的文件lsof -c -p 1234 列出进程号为1234的进程所打开的文件lsof -g gid 显示归属gid的进程情况lsof +d /usr/local/ 显示目录下被进程开启的">
@@ -37,7 +38,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -179,7 +180,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>##stace</p>
-<p>##losf<br>losf是一个列出当前系统打开文件的工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">lsof abc.txt 显示开启文件abc.txt的进程</div><div class="line">lsof -c abc 显示abc进程现在打开的文件</div><div class="line">lsof -c -p 1234 列出进程号为1234的进程所打开的文件</div><div class="line">lsof -g gid 显示归属gid的进程情况</div><div class="line">lsof +d /usr/local/ 显示目录下被进程开启的文件</div><div class="line">lsof +D /usr/local/ 同上，但是会搜索目录下的目录，时间较长</div><div class="line">lsof -d 4 显示使用fd为4的进程</div><div class="line">lsof -i 用以显示符合条件的进程情况</div><div class="line">lsof -i[46] [protocol][@hostname|hostaddr][:service|port]</div><div class="line">  46 --&gt; IPv4 or IPv6</div><div class="line">  protocol --&gt; TCP or UDP</div><div class="line">  hostname --&gt; Internet host name</div><div class="line">  hostaddr --&gt; IPv4地址</div><div class="line">  service --&gt; /etc/service中的 service name (可以不止一个)</div><div class="line">  port --&gt; 端口号 (可以不止一个)</div></pre></td></tr></table></figure></p>
+<p>##losf<br>losf是一个列出当前系统打开文件的工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">lsof abc.txt 显示开启文件abc.txt的进程</span><br><span class="line">lsof -c abc 显示abc进程现在打开的文件</span><br><span class="line">lsof -c -p 1234 列出进程号为1234的进程所打开的文件</span><br><span class="line">lsof -g gid 显示归属gid的进程情况</span><br><span class="line">lsof +d /usr/local/ 显示目录下被进程开启的文件</span><br><span class="line">lsof +D /usr/local/ 同上，但是会搜索目录下的目录，时间较长</span><br><span class="line">lsof -d 4 显示使用fd为4的进程</span><br><span class="line">lsof -i 用以显示符合条件的进程情况</span><br><span class="line">lsof -i[46] [protocol][@hostname|hostaddr][:service|port]</span><br><span class="line">  46 --&gt; IPv4 or IPv6</span><br><span class="line">  protocol --&gt; TCP or UDP</span><br><span class="line">  hostname --&gt; Internet host name</span><br><span class="line">  hostaddr --&gt; IPv4地址</span><br><span class="line">  service --&gt; /etc/service中的 service name (可以不止一个)</span><br><span class="line">  port --&gt; 端口号 (可以不止一个)</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -282,7 +283,7 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		<a href="http://www.miitbeian.gov.cn">豫ICP备17013970号-1</a> | Copyright &copy daozzg.com 保留所有权利。2018 朱争光
+    		<a href="http://www.beian.miit.gov.cn">豫ICP备17013970号-1</a> | Copyright &copy daozzg.com 保留所有权利。2019 朱争光
     	</div>
       	
     </div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.daozzg.com">
   <title>朱争光</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,6 +15,7 @@
 <meta property="og:url" content="http://www.daozzg.com/page/3/index.html">
 <meta property="og:site_name" content="朱争光">
 <meta property="og:description" content="2015年本科毕业，就职于DaoCloud,擅长后端开发各项技能，了解微服务开发，敏捷开发，scrum等">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="朱争光">
 <meta name="twitter:description" content="2015年本科毕业，就职于DaoCloud,擅长后端开发各项技能，了解微服务开发，敏捷开发，scrum等">
@@ -36,7 +37,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -159,28 +160,28 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2015-2015-02-26-link" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2015-2015-04-16-nginx-websocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-02-26-link/">link</a>
+      <a class="article-title" href="/2019/09/30/2015-2015-04-16-nginx-websocket/">nginx websocket</a>
     </h1>
   
 
         
-        <a href="/2017/11/01/2015-2015-02-26-link/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2019/09/30/2015-2015-04-16-nginx-websocket/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#####软连接<br>    ‘ln -s 源文件（目录） 目标文件（目录）’</p>
-<p>#####硬链接<br>     ‘ln -d 源文件（目录） 目标文件（目录）’</p>
+        <p>昨天把生成环境弄挂了，<br>一个报表系统用了websocket， 但nginx跳转我只配了http跳转，然后，就跪了</p>
+<p>今天紧急搜寻修复了下，其实挺简单的，加几行配置，不重复了，见官网<br><a href="http://nginx.com/blog/websocket-nginx/" target="_blank" rel="noopener">http://nginx.com/blog/websocket-nginx/</a></p>
 
       
 
@@ -193,7 +194,134 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-02-26-link/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/2015-2015-04-16-nginx-websocket/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015-2015-04-18-docker-images-shan-chu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/30/2015-2015-04-18-docker-images-shan-chu/">docker images 删除</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/30/2015-2015-04-18-docker-images-shan-chu/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>docker build images 后会产生好多没有名字的镜像，占空间，还很难查找自己要找的镜像，</p>
+<p>一键删除没有名称的镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images |grep &quot;&lt;none&gt;&quot; |awk &apos;&#123;print $3&#125;&apos; |xargs docker rmi</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/30/2015-2015-04-18-docker-images-shan-chu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015-2015-03-12-ubuntu-an-zhuang-pip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/30/2015-2015-03-12-ubuntu-an-zhuang-pip/">ubuntu 安装 pip</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/30/2015-2015-03-12-ubuntu-an-zhuang-pip/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python python-pip</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/30/2015-2015-03-12-ubuntu-an-zhuang-pip/">展开全文 >></a>
         </p>
       
 
@@ -230,21 +358,21 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-03-13-ajaxkua-yu/">ajax跨域</a>
+      <a class="article-title" href="/2019/09/30/2015-2015-03-13-ajaxkua-yu/">ajax跨域</a>
     </h1>
   
 
         
-        <a href="/2017/11/01/2015-2015-03-13-ajaxkua-yu/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2019/09/30/2015-2015-03-13-ajaxkua-yu/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>跨域的解决方式是CORS <a href="http://www.cnblogs.com/Darren_code/p/cors.html" target="_blank" rel="external">CORS介绍</a><br>弄了好久，其实只要允许options请求，在head内加入标识允许字段即可。<br>但是老项目的原因，权限动不了，options会302跳登录界面<br>就想到用nginx前端过滤<br>1.正常情况下，跳转到服务器<br>2.遇到options请求，直接返回，并带上指定head  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">location / &#123;</div><div class="line">               if ($request_method = OPTIONS ) &#123;</div><div class="line">               add_header Access-Control-Allow-Origin &quot;*&quot;;</div><div class="line">               add_header Access-Control-Allow-Methods &quot;POST, GET, PUT, OPTIONS, DELETE&quot;;</div><div class="line">               add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept, Authorization&quot;;</div><div class="line">               add_header Access-Control-Allow-Credentials &quot;true&quot;;</div><div class="line">               add_header Content-Length 0;</div><div class="line">               add_header  Access-Control-Max-Age 3600;</div><div class="line">               add_header Content-Type text/plain;</div><div class="line">               return 200;</div><div class="line">                &#125;</div><div class="line">               proxy_pass http://zzg-dev.zgfh.xyz;</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+        <p>跨域的解决方式是CORS <a href="http://www.cnblogs.com/Darren_code/p/cors.html" target="_blank" rel="noopener">CORS介绍</a><br>弄了好久，其实只要允许options请求，在head内加入标识允许字段即可。<br>但是老项目的原因，权限动不了，options会302跳登录界面<br>就想到用nginx前端过滤<br>1.正常情况下，跳转到服务器<br>2.遇到options请求，直接返回，并带上指定head  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">               if ($request_method = OPTIONS ) &#123;</span><br><span class="line">               add_header Access-Control-Allow-Origin &quot;*&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Methods &quot;POST, GET, PUT, OPTIONS, DELETE&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept, Authorization&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Credentials &quot;true&quot;;</span><br><span class="line">               add_header Content-Length 0;</span><br><span class="line">               add_header  Access-Control-Max-Age 3600;</span><br><span class="line">               add_header Content-Type text/plain;</span><br><span class="line">               return 200;</span><br><span class="line">                &#125;</span><br><span class="line">               proxy_pass http://zzg-dev.zgfh.xyz;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 <p>问题：目前ajax跨区不允许302等跳转，感觉没必要，就没再查解决方法</p>
 
       
@@ -258,7 +386,213 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-03-13-ajaxkua-yu/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/2015-2015-03-13-ajaxkua-yu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015-2015-03-15-eclipse-huan-jing-pei-zhi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/30/2015-2015-03-15-eclipse-huan-jing-pei-zhi/">eclipse 环境配置</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/30/2015-2015-03-15-eclipse-huan-jing-pei-zhi/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每次都要配置环境，每次都因为环境遇到各种问题，现在在这里记下来。为了自己，为了新来的同事。</p>
+<p>1.编码，一般都设置为UTF-8,所有的。见：<a href="http://blog.sina.com.cn/s/blog_45dc83410100spq1.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_45dc83410100spq1.html</a><br><a href="http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html</a></p>
+<p>2.注释，最好统一，之后复制改下自己的信息。见:<a href="http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html" target="_blank" rel="noopener">http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html</a></p>
+<p>3.jd-eclipse,一个自动下载jdk和反编译的工具。见：<a href="http://jd.benow.ca/" target="_blank" rel="noopener">http://jd.benow.ca/</a></p>
+<p>4.代码格式，最后大家的每行的代码数等一直，不然每次格式化代码，git就会提示一堆修改。见：<a href="http://blog.zgfh.xyz/?post=16" target="_blank" rel="noopener">http://blog.zgfh.xyz/?post=16</a></p>
+<p>5.字体<br>在菜单windows–&gt;prefereces里面，找到General–&gt;Appearance–&gt;Colors and Fonts，然后在右边找到你要修改的字体或背景，点Edit…即可。<br>比如修改Java的字体，就找Java–&gt;Java Editor Text Font</p>
+<p>6.一些快捷键（主要最后在英文输入法下面，搜狗什么的，有时候会快捷键冲突）<br>ctrl+shift+o 格式化代码  t<br>ctrl+shift+o 快速导入此文件中所有需要导入的类。  </p>
+<p>7.主题：<br>方法2：通过站点更新<br>eclipse：Help-&gt;Install New Software-&gt;Work with:Update Site - <a href="http://eclipse-color-theme.github.com/update" target="_blank" rel="noopener">http://eclipse-color-theme.github.com/update</a><br>MyEclipse：Help-&gt;MyEclipse Confrontation Center-&gt;Software-&gt;add site-&gt;输入name:ColorTheme,URL:<a href="http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal" target="_blank" rel="noopener">http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal</a> Sites下的Eclipse Color Theme下的Eclipse Color Theme右键Add to Profile-&gt;等待五分钟安装插件的时间-&gt;点击右下角的apply changes</p>
+<p>安装的过程中发生了错误，不过貌似没事，顺利安装好了，有点奇怪。<br>安装后需要重启Eclipse。重启后打开Window-&gt;Preferences-&gt;General-&gt;Apperance-&gt;Color Theme(未安装插件前是没有这个选项的)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/30/2015-2015-03-15-eclipse-huan-jing-pei-zhi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015-2015-04-08-shu-ju-ku-cao-zuo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/30/2015-2015-04-08-shu-ju-ku-cao-zuo/">数据库操作</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/30/2015-2015-04-08-shu-ju-ku-cao-zuo/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MySQL添加用户、删除用户与授权<br>MySql中添加用户,新建数据库,用户授权,删除用户,修改密码(注意每行后边都跟个;表示一个命令语句结束):</p>
+<p>1.新建用户</p>
+<p>　　1.1 登录MYSQL：</p>
+<p>　　@&gt;mysql -u root -p</p>
+<p>　　@&gt;密码</p>
+<p>　　1.2 创建用户：</p>
+<p>　　mysql&gt; insert into mysql.user(Host,User,Password) values(“localhost”,”test”,password(“1234”));</p>
+<p>　　这样就创建了一个名为：test 密码为：1234 的用户。</p>
+<p>　　注意：此处的”localhost”，是指该用户只能在本地登录，不能在另外一台机器上远程登录。如果想远程登录的话，将”localhost”改为”%”，表示在任何一台电脑上都可以登录。也可以指定某台机器可以远程登录。</p>
+<p>　　1.3 然后登录一下：</p>
+<p>　　mysql&gt;exit;</p>
+<p>　　@&gt;mysql -u test -p</p>
+<p>　　@&gt;输入密码</p>
+<p>　　mysql&gt;登录成功</p>
+<p>2.为用户授权</p>
+<p>　　授权格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
+<p>　　2.1 登录MYSQL（有ROOT权限），这里以ROOT身份登录：</p>
+<p>　　@&gt;mysql -u root -p</p>
+<p>　　@&gt;密码</p>
+<p>　　2.2 首先为用户创建一个数据库(testDB)：</p>
+<p>　　mysql&gt;create database testDB;</p>
+<p>　　2.3 授权test用户拥有testDB数据库的所有权限（某个数据库的所有权限）：</p>
+<p>　　 mysql&gt;grant all privileges on testDB.* to test@localhost identified by ‘1234’;</p>
+<p> 　　mysql&gt;flush privileges;//刷新系统权限表</p>
+<p>　　格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
+<p>　　2.4 如果想指定部分权限给一用户，可以这样来写:</p>
+<p>　　mysql&gt;grant select,update on testDB.* to test@localhost identified by ‘1234’;</p>
+<p>　　mysql&gt;flush privileges; //刷新系统权限表</p>
+<p>　　2.5 授权test用户拥有所有数据库的某些权限： 　 </p>
+<p>　　mysql&gt;grant select,delete,update,create,drop on <em>.</em> to test@”%” identified by “1234”;</p>
+<pre><code>//test用户对所有数据库都有select,delete,update,create,drop 权限。
+</code></pre><p>　 //@”%” 表示对所有非本地主机授权，不包括localhost。（localhost地址设为127.0.0.1，如果设为真实的本地地址，不知道是否可以，没有验证。）</p>
+<p>　//对localhost授权：加上一句grant all privileges on testDB.* to test@localhost identified by ‘1234’;即可。</p>
+<ol start="3">
+<li><p>删除用户</p>
+<p>　　@&gt;mysql -u root -p</p>
+</li>
+</ol>
+<p>　　@&gt;密码</p>
+<p> 　　mysql&gt;Delete FROM user Where User=’test’ and Host=’localhost’;</p>
+<p> 　　mysql&gt;flush privileges;</p>
+<p> 　　mysql&gt;drop database testDB; //删除用户的数据库</p>
+<p>删除账户及权限：&gt;drop user 用户名@’%’;</p>
+<p>　　　　　　　　&gt;drop user 用户名@ localhost; </p>
+<ol start="4">
+<li><p>修改指定用户密码</p>
+<p>　　@&gt;mysql -u root -p</p>
+<p>　　@&gt;密码</p>
+<p>　　mysql&gt;update mysql.user set password=password(‘新密码’) where User=”test” and Host=”localhost”;</p>
+<p>　　mysql&gt;flush privileges;</p>
+</li>
+</ol>
+<ol start="5">
+<li>列出所有数据库</li>
+</ol>
+<p>　　mysql&gt;show database;</p>
+<ol start="6">
+<li>切换数据库</li>
+</ol>
+<p>　　mysql&gt;use ‘数据库名’;</p>
+<ol start="7">
+<li>列出所有表</li>
+</ol>
+<p>　　mysql&gt;show tables;</p>
+<ol start="8">
+<li>显示数据表结构</li>
+</ol>
+<p>　　mysql&gt;describe 表名;</p>
+<ol start="9">
+<li>删除数据库和数据表</li>
+</ol>
+<p>　　mysql&gt;drop database 数据库名;</p>
+<p>　　mysql&gt;drop table 数据表名;</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/30/2015-2015-04-08-shu-ju-ku-cao-zuo/">展开全文 >></a>
         </p>
       
 
@@ -295,13 +629,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-04-11-jar-logger-wen-ti/">jar logger 问题</a>
+      <a class="article-title" href="/2019/09/30/2015-2015-04-11-jar-logger-wen-ti/">jar logger 问题</a>
     </h1>
   
 
         
-        <a href="/2017/11/01/2015-2015-04-11-jar-logger-wen-ti/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2019/09/30/2015-2015-04-11-jar-logger-wen-ti/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
@@ -354,7 +688,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-04-11-jar-logger-wen-ti/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/2015-2015-04-11-jar-logger-wen-ti/">展开全文 >></a>
         </p>
       
 
@@ -384,32 +718,28 @@
 
 
   
-    <article id="post-2015-2016-09-08-docker-compose" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2015-2015-02-26-link" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2016-09-08-docker-compose/">docker-compose</a>
+      <a class="article-title" href="/2019/09/30/2015-2015-02-26-link/">link</a>
     </h1>
   
 
         
-        <a href="/2017/11/01/2015-2016-09-08-docker-compose/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2019/09/30/2015-2015-02-26-link/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.715Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##docker-compose</p>
-<p>#####安装<br>下面是daocloud提供了简单安装方式，执行下就行（如果执行错误，见<a href="http://get.daocloud.io/" target="_blank" rel="external">http://get.daocloud.io/</a> 的更新）<br>这是个python，没有别的依赖，离线安装的话，直接下载后copy到目标机器也能用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</div><div class="line">chmod +x /usr/local/bin/docker-compose</div></pre></td></tr></table></figure></p>
-<p>#####使用<br>docker-compose 依赖一个配置文件docker-compose.yml<br>简单例子：<br>之前你运行一个nginx是这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run -v /some/nginx.conf:/etc/nginx/nginx.conf:ro -p 80:80 -e test_env:test -d daocloud.io/nginx</div></pre></td></tr></table></figure></p>
-<p>现在，新建一个docker-compose.yml文件，内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">prometheus-server:</div><div class="line">   image: daocloud.io/nginx</div><div class="line">   ports:</div><div class="line">     -  &quot;80:80&quot;</div><div class="line">   environment:</div><div class="line">    - test_env=test</div><div class="line">   volumes:</div><div class="line">     - /some/nginx.conf:/etc/nginx/nginx.conf</div></pre></td></tr></table></figure></p>
-<p>然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker-compose up -d</div></pre></td></tr></table></figure></p>
-<p>启动容器，更多参数<code>docker-compose -h</code> 查看，或官方文档：<a href="https://docs.docker.com/compose/gettingstarted/" target="_blank" rel="external">https://docs.docker.com/compose/gettingstarted/</a></p>
+        <p>#####软连接<br>    ‘ln -s 源文件（目录） 目标文件（目录）’</p>
+<p>#####硬链接<br>     ‘ln -d 源文件（目录） 目标文件（目录）’</p>
 
       
 
@@ -422,7 +752,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2016-09-08-docker-compose/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/2015-2015-02-26-link/">展开全文 >></a>
         </p>
       
 
@@ -452,99 +782,184 @@
 
 
   
-    <article id="post-2015-2015-04-08-shu-ju-ku-cao-zuo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2015-2015-02-26-nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-04-08-shu-ju-ku-cao-zuo/">数据库操作</a>
+      <a class="article-title" href="/2019/09/30/2015-2015-02-26-nginx/">nginx</a>
     </h1>
   
 
         
-        <a href="/2017/11/01/2015-2015-04-08-shu-ju-ku-cao-zuo/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2019/09/30/2015-2015-02-26-nginx/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.715Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>MySQL添加用户、删除用户与授权<br>MySql中添加用户,新建数据库,用户授权,删除用户,修改密码(注意每行后边都跟个;表示一个命令语句结束):</p>
-<p>1.新建用户</p>
-<p>　　1.1 登录MYSQL：</p>
-<p>　　@&gt;mysql -u root -p</p>
-<p>　　@&gt;密码</p>
-<p>　　1.2 创建用户：</p>
-<p>　　mysql&gt; insert into mysql.user(Host,User,Password) values(“localhost”,”test”,password(“1234”));</p>
-<p>　　这样就创建了一个名为：test 密码为：1234 的用户。</p>
-<p>　　注意：此处的”localhost”，是指该用户只能在本地登录，不能在另外一台机器上远程登录。如果想远程登录的话，将”localhost”改为”%”，表示在任何一台电脑上都可以登录。也可以指定某台机器可以远程登录。</p>
-<p>　　1.3 然后登录一下：</p>
-<p>　　mysql&gt;exit;</p>
-<p>　　@&gt;mysql -u test -p</p>
-<p>　　@&gt;输入密码</p>
-<p>　　mysql&gt;登录成功</p>
-<p>2.为用户授权</p>
-<p>　　授权格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
-<p>　　2.1 登录MYSQL（有ROOT权限），这里以ROOT身份登录：</p>
-<p>　　@&gt;mysql -u root -p</p>
-<p>　　@&gt;密码</p>
-<p>　　2.2 首先为用户创建一个数据库(testDB)：</p>
-<p>　　mysql&gt;create database testDB;</p>
-<p>　　2.3 授权test用户拥有testDB数据库的所有权限（某个数据库的所有权限）：</p>
-<p>　　 mysql&gt;grant all privileges on testDB.* to test@localhost identified by ‘1234’;</p>
-<p> 　　mysql&gt;flush privileges;//刷新系统权限表</p>
-<p>　　格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
-<p>　　2.4 如果想指定部分权限给一用户，可以这样来写:</p>
-<p>　　mysql&gt;grant select,update on testDB.* to test@localhost identified by ‘1234’;</p>
-<p>　　mysql&gt;flush privileges; //刷新系统权限表</p>
-<p>　　2.5 授权test用户拥有所有数据库的某些权限： 　 </p>
-<p>　　mysql&gt;grant select,delete,update,create,drop on <em>.</em> to test@”%” identified by “1234”;</p>
-<pre><code>//test用户对所有数据库都有select,delete,update,create,drop 权限。
-</code></pre><p>　 //@”%” 表示对所有非本地主机授权，不包括localhost。（localhost地址设为127.0.0.1，如果设为真实的本地地址，不知道是否可以，没有验证。）</p>
-<p>　//对localhost授权：加上一句grant all privileges on testDB.* to test@localhost identified by ‘1234’;即可。</p>
-<ol>
-<li><p>删除用户</p>
-<p>　　@&gt;mysql -u root -p</p>
-</li>
-</ol>
-<p>　　@&gt;密码</p>
-<p> 　　mysql&gt;Delete FROM user Where User=’test’ and Host=’localhost’;</p>
-<p> 　　mysql&gt;flush privileges;</p>
-<p> 　　mysql&gt;drop database testDB; //删除用户的数据库</p>
-<p>删除账户及权限：&gt;drop user 用户名@’%’;</p>
-<p>　　　　　　　　&gt;drop user 用户名@ localhost; </p>
-<ol>
-<li><p>修改指定用户密码</p>
-<p>　　@&gt;mysql -u root -p</p>
-<p>　　@&gt;密码</p>
-<p>　　mysql&gt;update mysql.user set password=password(‘新密码’) where User=”test” and Host=”localhost”;</p>
-<p>　　mysql&gt;flush privileges;</p>
-</li>
-</ol>
-<ol>
-<li>列出所有数据库</li>
-</ol>
-<p>　　mysql&gt;show database;</p>
-<ol>
-<li>切换数据库</li>
-</ol>
-<p>　　mysql&gt;use ‘数据库名’;</p>
-<ol>
-<li>列出所有表</li>
-</ol>
-<p>　　mysql&gt;show tables;</p>
-<ol>
-<li>显示数据表结构</li>
-</ol>
-<p>　　mysql&gt;describe 表名;</p>
-<ol>
-<li>删除数据库和数据表</li>
-</ol>
-<p>　　mysql&gt;drop database 数据库名;</p>
-<p>　　mysql&gt;drop table 数据表名;</p>
+        <p>#安装<br><strong>ubuntu</strong><br>    <code>apt-get install nginx</code></p>
+<p>#配置</p>
+<p>##/etc/nginx/agin.conf<br>    `##nginx</p>
+<pre><code>#使用的用户和组
+user www-data; 
+
+#指定工作衍生进程数（一般等于CPU总核数或总核数的两倍）
+worker_processes 4;
+
+#指定PID存放的路径
+pid /run/nginx.pid;
+
+#指定文件描述符数量
+worker_rlimit_nofile 51200;
+
+events {
+#使用的网络I/O模型，linux戏台推荐采用epoll模型，freebsd系统采用kqueue模型
+use epoll;
+
+#允许最大连接数
+worker_connections 51200;
+# multi_accept on;
+}
+
+http {
+
+##
+# 基础设置
+##
+
+sendfile on;
+tcp_nopush on;
+tcp_nodelay on;
+keepalive_timeout 65;
+types_hash_max_size 2048;
+# server_tokens off;
+
+server_names_hash_bucket_size 128;
+# server_name_in_redirect off;
+
+include /etc/nginx/mime.types;
+default_type application/octet-stream;
+
+##
+# 日志设置
+##
+
+#指定错误日志存放路径数， 错误日志记录的级别可选项为：[debug|info|notice|warn|error|crit]
+access_log /var/log/nginx/access.log;
+error_log /var/log/nginx/error.log;
+
+##
+# 压缩设置
+##
+
+gzip on;
+gzip_disable &quot;msie6&quot;;
+
+gzip_vary on;
+# gzip_proxied any;
+gzip_comp_level 2;
+gzip_buffers 4 16k;
+gzip_http_version 1.1;
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+##
+# nginx-naxsi config
+##
+# Uncomment it if you installed nginx-naxsi
+##
+
+#include /etc/nginx/naxsi_core.rules;
+
+##
+# nginx-passenger config
+##
+# Uncomment it if you installed nginx-passenger
+##
+
+#passenger_root /usr;
+#passenger_ruby /usr/bin/ruby;
+
+##
+# 虚拟主机设置
+##
+
+include /etc/nginx/conf.d/*.conf;
+include /etc/nginx/sites-enabled/*;
+}
+
+
+#mail {
+#    # See sample authentication script at:
+#    # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+# 
+#    # auth_http localhost/auth.php;
+#    # pop3_capabilities &quot;TOP&quot; &quot;USER&quot;;
+#    # imap_capabilities &quot;IMAP4rev1&quot; &quot;UIDPLUS&quot;;
+# 
+#    server {
+#        listen     localhost:110;
+#        protocol   pop3;
+#        proxy      on;
+#    }
+# 
+#    server {
+#        listen     localhost:143;
+#        protocol   imap;
+#        proxy      on;
+#    }
+#}`
+</code></pre><p>##/etc/nginx/sites-available/default</p>
+<pre><code>#主机
+  server {
+  listen 80;
+  server_name www.demo.com;
+  root /home/zxl/wwwroot/demo/;
+  index index.php index.html index.htm;
+
+  #如果没有可访问目录或文件
+  if (!-e $request_filename) {
+      #将访问路径跳转至根目录下的index.php接受处理
+      rewrite  ^/(.*)$  /index.php/$1  last;
+      break;
+  }
+
+  #处理请求路径满足匹配 .php  的响应
+  location ~ \.php
+  {
+      #响应请求处理入口，使用php-fpm进行管理
+      fastcgi_pass unix:/var/run/php5-fpm.sock;
+
+      fastcgi_index index.php;
+      fastcgi_split_path_info ^(.+\.php)(.*)$;
+      fastcgi_param PATH_INFO $fastcgi_path_info;
+      fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
+      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+      include fastcgi_params;
+  }
+
+  #配置静态图片文件客户端缓存时间
+  location ~ .*\.(gif|jgp|jpeg|png|bmp|swf)$
+  {
+      expires 30d; #30天
+  }
+
+  #配置js、css文件客户端缓存时间
+  location ~ .*\.(js|css)?$
+  {
+      expires 1h; #1小时
+  }
+
+  #设置访问日志保存格式
+  #log_format access &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos; &apos;$status $body_bytes_sent &quot;$http_referer&quot;&apos; &apos;&quot;$http_user_agent&quot; $http_x_forwarded_for&apos;;
+
+  #设置访问日志保存路径
+  #access_log /var/log/nginx/access.log access;
+</code></pre><p>  }</p>
 
       
 
@@ -557,7 +972,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-04-08-shu-ju-ku-cao-zuo/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/2015-2015-02-26-nginx/">展开全文 >></a>
         </p>
       
 
@@ -587,35 +1002,30 @@
 
 
   
-    <article id="post-2015-2015-03-15-eclipse-huan-jing-pei-zhi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2015-2015-02-26-ghost-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-03-15-eclipse-huan-jing-pei-zhi/">eclipse 环境配置</a>
+      <a class="article-title" href="/2019/09/30/2015-2015-02-26-ghost-post/">ghost安装配置</a>
     </h1>
   
 
         
-        <a href="/2017/11/01/2015-2015-03-15-eclipse-huan-jing-pei-zhi/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2019/09/30/2015-2015-02-26-ghost-post/" class="archive-article-date">
+  	<time datetime="2019-09-30T02:36:16.714Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>每次都要配置环境，每次都因为环境遇到各种问题，现在在这里记下来。为了自己，为了新来的同事。</p>
-<p>1.编码，一般都设置为UTF-8,所有的。见：<a href="http://blog.sina.com.cn/s/blog_45dc83410100spq1.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_45dc83410100spq1.html</a><br><a href="http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html" target="_blank" rel="external">http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html</a></p>
-<p>2.注释，最好统一，之后复制改下自己的信息。见:<a href="http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html" target="_blank" rel="external">http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html</a></p>
-<p>3.jd-eclipse,一个自动下载jdk和反编译的工具。见：<a href="http://jd.benow.ca/" target="_blank" rel="external">http://jd.benow.ca/</a></p>
-<p>4.代码格式，最后大家的每行的代码数等一直，不然每次格式化代码，git就会提示一堆修改。见：<a href="http://blog.zgfh.xyz/?post=16" target="_blank" rel="external">http://blog.zgfh.xyz/?post=16</a></p>
-<p>5.字体<br>在菜单windows–&gt;prefereces里面，找到General–&gt;Appearance–&gt;Colors and Fonts，然后在右边找到你要修改的字体或背景，点Edit…即可。<br>比如修改Java的字体，就找Java–&gt;Java Editor Text Font</p>
-<p>6.一些快捷键（主要最后在英文输入法下面，搜狗什么的，有时候会快捷键冲突）<br>ctrl+shift+o 格式化代码  t<br>ctrl+shift+o 快速导入此文件中所有需要导入的类。  </p>
-<p>7.主题：<br>方法2：通过站点更新<br>eclipse：Help-&gt;Install New Software-&gt;Work with:Update Site - <a href="http://eclipse-color-theme.github.com/update" target="_blank" rel="external">http://eclipse-color-theme.github.com/update</a><br>MyEclipse：Help-&gt;MyEclipse Confrontation Center-&gt;Software-&gt;add site-&gt;输入name:ColorTheme,URL:<a href="http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal" target="_blank" rel="external">http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal</a> Sites下的Eclipse Color Theme下的Eclipse Color Theme右键Add to Profile-&gt;等待五分钟安装插件的时间-&gt;点击右下角的apply changes</p>
-<p>安装的过程中发生了错误，不过貌似没事，顺利安装好了，有点奇怪。<br>安装后需要重启Eclipse。重启后打开Window-&gt;Preferences-&gt;General-&gt;Apperance-&gt;Color Theme(未安装插件前是没有这个选项的)</p>
+        <p><strong>安装</strong><br><a href="http://www.ghostchina.com/install-ghost-on-ali-ecs-forth-step-install-ghost/" target="_blank" rel="noopener">http://www.ghostchina.com/install-ghost-on-ali-ecs-forth-step-install-ghost/</a></p>
+<p><strong>加速</strong><br><a href="http://www.ghostchina.com/let-nginx-serve-static-files-for-your-ghost-blog/" target="_blank" rel="noopener">http://www.ghostchina.com/let-nginx-serve-static-files-for-your-ghost-blog/</a></p>
+<p><strong>使用mysql存储数据</strong><br>安装mysql <a href="http://www.ghostchina.com/install-ghost-on-ali-ecs-third-step-install-mysql/" target="_blank" rel="noopener">http://www.ghostchina.com/install-ghost-on-ali-ecs-third-step-install-mysql/</a><br><a href="http://www.ghostchina.com/migrating-ghost-installation-from-sqlite3-to-mysql-database/" target="_blank" rel="noopener">http://www.ghostchina.com/migrating-ghost-installation-from-sqlite3-to-mysql-database/</a></p>
+<p><strong>nginx 安装</strong><br><a href="http://www.ghostchina.com/install-ghost-on-ali-ecs-second-step-install-nginx/" target="_blank" rel="noopener">http://www.ghostchina.com/install-ghost-on-ali-ecs-second-step-install-nginx/</a></p>
 
       
 
@@ -628,310 +1038,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-03-15-eclipse-huan-jing-pei-zhi/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-04-14-hua-er-nu-li-di-kai" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-04-14-hua-er-nu-li-di-kai/">花儿努力地开</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/01/2015-2015-04-14-hua-er-nu-li-di-kai/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>你知道,你爱惜,花儿努力地开，</p>
-<p>你不知,你厌恶,花儿努力地开。</p>
-<p>——泰戈尔</p>
-<p>   每一天清晨，太阳升起，月儿落下。日升月落，是自然永恒</p>
-<p>法则。不管晴天雨天，光阴总是在我们的指缝间悄悄的溜走。这</p>
-<p>一天的收获能带给我们惊喜与满足，这一天的失落带给我们的是</p>
-<p>失望和痛苦。可是这些又怎么能够阻止他的晃然一现？曾经读过</p>
-<p>不少网络上的禅文，自认没有修佛的那份清心和悟心。但是记忆</p>
-<p>里感受最深刻的一句话就是：开心是一天，痛苦也是一天，你该</p>
-<p>怎么选择过这一天？亦如花儿，有人眷顾要绽放，没人欣赏也要</p>
-<p>绽放。因此，应该努力为自己而绽放！</p>
-<p>   知道心静如水是一份高境界，可不管怎么摒弃杂念，心里还</p>
-<p>是会微澜乍起，涟漪涟涟。平凡的人是很难达到那么高境界的，</p>
-<p>既然如此，那就从平凡做起，从简单开心做起。简单开心的做自</p>
-<p>己，采集生活中的点滴，点缀自己走过的每一步路，让每一步走</p>
-<p>过的路在自己的心里跳舞，在自己的心里开花。就象花儿努力地</p>
-<p>开，不论开心与否都尽情的盛开，开出自己的灿烂与芬芳。可能</p>
-<p>这一路会有呵护花的人出现，他会和你一起陶醉，和你一起欣</p>
-<p>赏，陪你一起凋落。花儿努力地开，那就是它用心的去感激他的</p>
-<p>陪伴，珍惜他的爱心，收获他的付出。再用自己的芳香做礼物，</p>
-<p>即使碾落成泥，也要芳香如故。</p>
-<p>   “生如夏花之绚烂，死如秋叶之静美”。美好的日子总是一天</p>
-<p>天的流逝，抛弃流逝中的种种无奈、不甘，选择简单开心的度</p>
-<p>过，是花儿的选择。为此，花儿自当努力地开！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-04-14-hua-er-nu-li-di-kai/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-04-16-nginx-websocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-04-16-nginx-websocket/">nginx websocket</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/01/2015-2015-04-16-nginx-websocket/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天把生成环境弄挂了，<br>一个报表系统用了websocket， 但nginx跳转我只配了http跳转，然后，就跪了</p>
-<p>今天紧急搜寻修复了下，其实挺简单的，加几行配置，不重复了，见官网<br><a href="http://nginx.com/blog/websocket-nginx/" target="_blank" rel="external">http://nginx.com/blog/websocket-nginx/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-04-16-nginx-websocket/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-04-18-docker-images-shan-chu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-04-18-docker-images-shan-chu/">docker images 删除</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/01/2015-2015-04-18-docker-images-shan-chu/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>docker build images 后会产生好多没有名字的镜像，占空间，还很难查找自己要找的镜像，</p>
-<p>一键删除没有名称的镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker images |grep &quot;&lt;none&gt;&quot; |awk &apos;&#123;print $3&#125;&apos; |xargs docker rmi</div></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-04-18-docker-images-shan-chu/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-04-19-tomcat-service-xiang-guan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/01/2015-2015-04-19-tomcat-service-xiang-guan/">tomcat service 相关（windows）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/01/2015-2015-04-19-tomcat-service-xiang-guan/" class="archive-article-date">
-  	<time datetime="2017-11-01T04:17:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>由于需要一台电脑安装多个tomcat服务。所有没有安装tomcat.exe版  </p>
-<p>1.tomcat安装  </p>
-<ul>
-<li>下载zip包</li>
-<li>配置了JAVA_HOME    </li>
-<li>点击tomcat目录下的/bin/startup.bat 或  cmd到tomcat/bin目录： catalina.bat run 即可运行  </li>
-</ul>
-<p>2.tomcat制作成服务配置  </p>
-<ul>
-<li>cmd到tomcat/bin目录：  </li>
-<li>service.bat  install  服务名   </li>
-<li>可以在 管理–服务中找到你刚注册的服务名，进行启动，关闭  </li>
-<li><p>也可以cmd下：     net start/stop  服务名  </p>
-<p><strong>卸载服务 service.bat  uninstall  服务名</strong>  </p>
-</li>
-</ul>
-<p>3.tomcat服务运行参数<br> 直接catalina.bat run 运行的时候，可以在catalina.bat内添加参数<br> 但做成服务后不能使用该方法   </p>
-<ul>
-<li>cmd regedit 打开注册表</li>
-<li>找到 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun 2.0\Tomcat7\Parameters\JAVA  </li>
-<li>调整Options 或ClassPATH</li>
-</ul>
-<p>  参考：  </p>
-<blockquote>
-<p><a href="http://blog.csdn.net/hejielhwx/article/details/10175883" target="_blank" rel="external">http://blog.csdn.net/hejielhwx/article/details/10175883</a></p>
-<p><a href="http://www.blogjava.net/nkjava/archive/2012/03/08/371535.html" target="_blank" rel="external">http://www.blogjava.net/nkjava/archive/2012/03/08/371535.html</a></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/01/2015-2015-04-19-tomcat-service-xiang-guan/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/2015-2015-02-26-ghost-post/">展开全文 >></a>
         </p>
       
 
@@ -975,7 +1082,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		<a href="http://www.miitbeian.gov.cn">豫ICP备17013970号-1</a> | Copyright &copy daozzg.com 保留所有权利。2018 朱争光
+    		<a href="http://www.beian.miit.gov.cn">豫ICP备17013970号-1</a> | Copyright &copy daozzg.com 保留所有权利。2019 朱争光
     	</div>
       	
     </div>
