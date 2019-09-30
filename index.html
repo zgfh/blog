@@ -160,35 +160,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-centos源制作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/09/30/centos源制作/">centos源制作</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.724Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2019/09/30/centos源制作/" class="archive-article-date">
+  	<time datetime="2019-09-30T03:38:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>制作，如ansible</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum install createrepo</span><br><span class="line">yum install --downloadonly --downloaddir=ansible ansible</span><br><span class="line">cd ansible</span><br><span class="line">createrepo .</span><br><span class="line"># install.sh</span><br><span class="line">chmod u+x install.sh</span><br><span class="line">tar -zcf ansible-2.3.1.0-1.el7.tar.gz ansible install-ansible.sh</span><br></pre></td></tr></table></figure>
+<p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">set -e</span><br><span class="line">cp -r ansible /tmp</span><br><span class="line">cat &lt;&lt; EOF &gt; /etc/yum.repos.d/ansible.repo</span><br><span class="line">[ansible]</span><br><span class="line">name=Ansible Repository</span><br><span class="line">baseurl=file:///tmp/ansible</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">EOF</span><br><span class="line">yum makecache</span><br><span class="line">yum install ansible</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -197,22 +191,11 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/30/centos源制作/">展开全文 >></a>
         </p>
       
 
@@ -242,32 +225,29 @@
 
 
   
-    <article id="post-2015-2016-09-08-docker-compose" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ssh-forward" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-09-08-docker-compose/">docker-compose</a>
+      <a class="article-title" href="/2018/03/23/ssh-forward/">ssh-forward</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2016-09-08-docker-compose/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.722Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2018/03/23/ssh-forward/" class="archive-article-date">
+  	<time datetime="2018-03-23T03:29:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##docker-compose</p>
-<p>#####安装<br>下面是daocloud提供了简单安装方式，执行下就行（如果执行错误，见<a href="http://get.daocloud.io/" target="_blank" rel="noopener">http://get.daocloud.io/</a> 的更新）<br>这是个python，没有别的依赖，离线安装的话，直接下载后copy到目标机器也能用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></p>
-<p>#####使用<br>docker-compose 依赖一个配置文件docker-compose.yml<br>简单例子：<br>之前你运行一个nginx是这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v /some/nginx.conf:/etc/nginx/nginx.conf:ro -p 80:80 -e test_env:test -d daocloud.io/nginx</span><br></pre></td></tr></table></figure></p>
-<p>现在，新建一个docker-compose.yml文件，内容如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">prometheus-server:</span><br><span class="line">   image: daocloud.io/nginx</span><br><span class="line">   ports:</span><br><span class="line">     -  &quot;80:80&quot;</span><br><span class="line">   environment:</span><br><span class="line">    - test_env=test</span><br><span class="line">   volumes:</span><br><span class="line">     - /some/nginx.conf:/etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></p>
-<p>然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure></p>
-<p>启动容器，更多参数<code>docker-compose -h</code> 查看，或官方文档：<a href="https://docs.docker.com/compose/gettingstarted/" target="_blank" rel="noopener">https://docs.docker.com/compose/gettingstarted/</a></p>
+        <p>远程主机允许ssh 代理的端口外部访问（否则代理出来的都是127.0.0.1）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修改vim /etc/ssh/sshd_config</span><br><span class="line">添加GatewayPorts yes</span><br><span class="line">service sshd restart即可</span><br></pre></td></tr></table></figure></p>
+<p>远程代理本地<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 把本地局域网内（本级可访问即可）的10.10.1.2(也可以是127.0.0.1)的8000端口代理到服务器192.168.1.2的 30000端口，这样，访问192.168.1.2:30000 相当于访问局域网内的10.10.1.2:8000</span><br><span class="line">ssh root@192.168.1.2 -R 30000:10.10.1.2:8000</span><br></pre></td></tr></table></figure></p>
+<p>本地代理远程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 把服务器局域网内（服务器可访问即可）的10.10.1.2(也可以是127.0.0.1)的31000端口代理到本地的8080端口，这样，访问127.0.0.1:8080相当于访问在服务器上访问10.10.1.2:31000</span><br><span class="line">ssh root@192.168.1.2 -L 8080:10.10.1.2:31000</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -280,7 +260,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-09-08-docker-compose/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/03/23/ssh-forward/">展开全文 >></a>
         </p>
       
 
@@ -310,28 +290,27 @@
 
 
   
-    <article id="post-2015-2016-09-30-proxy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-go-start-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-09-30-proxy/">linux 网络调试</a>
+      <a class="article-title" href="/2018/01/08/go-start-md/">go_start.md</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2016-09-30-proxy/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.722Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2018/01/08/go-start-md/" class="archive-article-date">
+  	<time datetime="2018-01-08T14:08:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="tcpdump-linux抓包工具"><a href="#tcpdump-linux抓包工具" class="headerlink" title="tcpdump linux抓包工具"></a>tcpdump linux抓包工具</h3><p>例如：查看 80端口的数据包（http）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpdump -Xvvenn tcp port 80</span><br></pre></td></tr></table></figure></p>
-<h3 id="查看主机监听端口"><a href="#查看主机监听端口" class="headerlink" title="查看主机监听端口"></a>查看主机监听端口</h3><p>可以查看端口占用，占用端口的服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nutlp</span><br></pre></td></tr></table></figure></p>
+        <p>环境准备教程： <a href="https://www.jianshu.com/p/eb35a47a157e" target="_blank" rel="noopener">https://www.jianshu.com/p/eb35a47a157e</a><br>测试用例：<a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/11.3.md" target="_blank" rel="noopener">https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/11.3.md</a><br>go init: <a href="http://blog.csdn.net/rznice/article/details/18987047" target="_blank" rel="noopener">http://blog.csdn.net/rznice/article/details/18987047</a></p>
 
       
 
@@ -344,7 +323,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-09-30-proxy/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/01/08/go-start-md/">展开全文 >></a>
         </p>
       
 
@@ -374,29 +353,31 @@
 
 
   
-    <article id="post-2015-2016-04-19-ghost-shi-yong" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-PWD-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-04-19-ghost-shi-yong/">ghost 使用</a>
+      <a class="article-title" href="/2018/01/08/PWD-md/">PWD.md</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2016-04-19-ghost-shi-yong/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.721Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2018/01/08/PWD-md/" class="archive-article-date">
+  	<time datetime="2018-01-08T12:43:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##增加搜索框<br>教程<br><a href="http://academy.ghost.org/how-to-add-swiftype-search-to-your-ghost-blog/" target="_blank" rel="noopener">http://academy.ghost.org/how-to-add-swiftype-search-to-your-ghost-blog/</a></p>
-<p>##百度流量统计<br><a href="http://sitecenter.baidu.com/sc-web/20271964/home/site/statrule?siteId=8656728" target="_blank" rel="noopener">http://sitecenter.baidu.com/sc-web/20271964/home/site/statrule?siteId=8656728</a></p>
-<p>##加入图片<br><a href="http://support.ghost.org/add-image-post/" target="_blank" rel="noopener">http://support.ghost.org/add-image-post/</a><br><img src alt></p>
+        <p>#安装 docker machin<br>见：<a href="https://docs.docker.com/machine/install-machine/#install-machine-directly" target="_blank" rel="noopener">https://docs.docker.com/machine/install-machine/#install-machine-directly</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` &gt;/tmp/docker-machine &amp;&amp; \</span><br><span class="line">chmod +x /tmp/docker-machine &amp;&amp; \</span><br><span class="line">sudo cp /tmp/docker-machine /usr/local/bin/docker-machine</span><br></pre></td></tr></table></figure></p>
+<p>#安装 docker-machine-driver-pwd<br><a href="https://github.com/play-with-docker/docker-machine-driver-pwd" target="_blank" rel="noopener">https://github.com/play-with-docker/docker-machine-driver-pwd</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/play-with-docker/docker-machine-driver-pwd/releases/download/v0.0.5/docker-machine-driver.tar</span><br><span class="line">tar -vxf docker-machine-driver.tar</span><br><span class="line">mv `dpkg --print-architecture`/docker-machine-driver-pwd /usr/local/bin/docker-machine-driver-pwd</span><br></pre></td></tr></table></figure></p>
+<p>#创建机器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Create a session in play-with-docker.com and set the PWD_URL env variable</span><br><span class="line">export PWD_URL=https://labs.play-with-docker.com/p/b99mkeol9m7g00f57fng</span><br><span class="line">docker-machine create -d pwd --pwd-url $PWD_URL node1</span><br><span class="line">eval $(docker-machine env node1)</span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<p>#参考<br><a href="http://training.play-with-docker.com/" target="_blank" rel="noopener">http://training.play-with-docker.com/</a><br>创建失败可能需要重新开一个session试试： <a href="https://github.com/play-with-docker/docker-machine-driver-pwd/issues/11" target="_blank" rel="noopener">https://github.com/play-with-docker/docker-machine-driver-pwd/issues/11</a></p>
 
       
 
@@ -409,7 +390,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-04-19-ghost-shi-yong/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/01/08/PWD-md/">展开全文 >></a>
         </p>
       
 
@@ -439,299 +420,40 @@
 
 
   
-    <article id="post-2015-2016-04-25-centos-wang-luo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python-unicode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-04-25-centos-wang-luo/">centos 网络</a>
+      <a class="article-title" href="/2017/12/20/python-unicode/">python unicode</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2016-04-25-centos-wang-luo/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.721Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2017/12/20/python-unicode/" class="archive-article-date">
+  	<time datetime="2017-12-20T03:40:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##dhcp<br>see <a href="https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-dhcp-configuring-client.html" target="_blank" rel="noopener">https://www.centos.org/docs/5/html/Deployment_Guide-en-US/s1-dhcp-configuring-client.html</a></p>
-<p>/etc/sysconfig/network<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes</span><br></pre></td></tr></table></figure></p>
-<p> /etc/sysconfig/network-scripts/ifcfg-eth0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=eth0</span><br><span class="line">BOOTPROTO=dhcp</span><br><span class="line">ONBOOT=yes</span><br></pre></td></tr></table></figure></p>
-<p>#静态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=yes</span><br><span class="line">PEERDNS=yes</span><br><span class="line">PEERROUTES=yes</span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPADDR=10.1.1.200</span><br><span class="line">IPV6INIT=yes</span><br><span class="line">IPV6_AUTOCONF=yes</span><br><span class="line">IPV6_DEFROUTE=yes</span><br><span class="line">IPV6_PEERDNS=yes</span><br><span class="line">IPV6_PEERROUTES=yes</span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">NAME=enp0s3</span><br><span class="line">UUID=75a170ba-6bfa-4553-8070-e658eb8ffb1e</span><br><span class="line">ONBOOT=yes</span><br></pre></td></tr></table></figure></p>
-<p>##getway<br>vi /etc/sysconfig/network<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#add  </span><br><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=unixmen-centos7</span><br><span class="line">GATEWAY=10.1.1.253</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-04-25-centos-wang-luo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2016-04-20-nginx-base-auth" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-04-20-nginx-base-auth/">nginx base auth</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2016-04-20-nginx-base-auth/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.721Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##config<br>增加两行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    auth_basic           &quot;closed site&quot;;</span><br><span class="line">    auth_basic_user_file conf/htpasswd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>##生成htpasswd<br>生成一个用户名admin，密码admin的帐户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &quot;echo -n &apos;admin:&apos;&quot; &gt;&gt; htpasswd</span><br><span class="line">sudo sh -c &quot;openssl passwd admin&quot; &gt;&gt; htpasswd</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-04-20-nginx-base-auth/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2016-05-24-mac-nfs-gong-xiang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-05-24-mac-nfs-gong-xiang/">mac nfs 共享</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2016-05-24-mac-nfs-gong-xiang/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.721Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>NFS（Network File System）是主要在 Unix 系统间实现磁盘文件共享的一种方法，其优点是传输速度比SAMBA快。在MAC系统之中也是支持这种共享方式的创建与访问。</p>
-<p>#####操作方法如下：<br>打开“Terminal”，并按提示输入管理员账号，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/exports  ##编辑/etc/exports</span><br></pre></td></tr></table></figure></p>
-<p>按“i”进行插入编辑，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users -alldirs -ro -network 192.168.0.0 -mask 255.255.0.0</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>说明</em></strong>：共享Users目录和所有子文件夹给192.168.0.0全网段，并设置为只读。<br>按“Esc”, 键入 :wq  保存并退出。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo nfsd enable #确认NFSD服务开启</span><br><span class="line">sudo nfsd update #刷新NFSD共享资源</span><br><span class="line">showmount -e #显示当前共享的资源</span><br></pre></td></tr></table></figure></p>
-<p>即使系统重启，只要登陆进入MAC系统，别的设备即可访问NFS共享。</p>
-<p>#####其他说明<br>不共享带有空格的文件夹，若要NFS共享“/Volumes/Store/My Movies”,则将共享目录设置为“/Volumes/Store”，保证其他系统平台能正常访问。<br>MAC系统方法见下图；Win系统企业或旗舰版可添加系统组件（请参考此文），Win系统其他版本访问方法需要用客户端（Nekodrive）。</p>
-<p>有简便的图形化操作软件“NFS Manager“。但此软是DEMO版本，有保存限制，请高手帮忙破解。</p>
-<p>link:<a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/exports.5.html#//apple_ref/doc/man/5/exports" target="_blank" rel="noopener">https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/exports.5.html#//apple_ref/doc/man/5/exports</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-05-24-mac-nfs-gong-xiang/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2016-05-27-ci" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2016-05-27-ci/">ci jenkins github</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2016-05-27-ci/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.721Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##jenkins install<br>复制下面的代码，保存为docker－compose.yml<br>然后docker-compose up -d<br>(docker和docker－compepose安装见：<a href="http://get.daocloud.io/" target="_blank" rel="noopener">http://get.daocloud.io/</a>)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">jenkins:</span><br><span class="line">    image: jenkins</span><br><span class="line">    privileged: true</span><br><span class="line">    user: root</span><br><span class="line">    volumes:</span><br><span class="line">        - /data/jenkins:/var/jenkins_home</span><br><span class="line">        - /var/run/docker.sock:/var/run/docker.sock</span><br><span class="line">        - /usr/bin/docker:/usr/bin/docker</span><br><span class="line">    ports:</span><br><span class="line">        - 80:8080</span><br><span class="line">        - 50000:50000</span><br><span class="line">registry:</span><br><span class="line">  image: registry</span><br><span class="line">  environment:</span><br><span class="line">    - STORAGE_PATH=/registry</span><br><span class="line">  volumes:</span><br><span class="line">    - registry-stuff:/registry</span><br><span class="line">  ports: </span><br><span class="line">    - &quot;5000:5000&quot;</span><br></pre></td></tr></table></figure></p>
-<p>##配置jenkins</p>
-<p><a href="https://www.cloudbees.com/blog/better-integration-between-jenkins-and-github-github-jenkins-plugin" target="_blank" rel="noopener">https://www.cloudbees.com/blog/better-integration-between-jenkins-and-github-github-jenkins-plugin</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2016-05-27-ci/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-06-04-ubuntu-vim-she-zhi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-06-04-ubuntu-vim-she-zhi/">ubuntu vim 设置</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2015-06-04-ubuntu-vim-she-zhi/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在终端下使用vim进行编辑时，默认情况下，编辑的界面上是没有显示行号、语法高亮度显示、智能缩进等功能的。为了更好的在vim下进行工作，需要手动设置一个配置文件：.vimrc。<br>在启动vim时，当前用户根目录下的.vimrc文件会被自动读取，该文件可以包含一些设置甚至脚本，所以，一般情况下把.vimrc文件创建在当前用户的根目录下比较方便，即创建的命令为：<br>$vi ~/.vimrc<br>设置完后<br>$:x 或者 $wq<br>进行保存退出即可。<br>下面给出一个例子，其中列出了经常用到的设置，详细的设置信息请参照参考资料：<br>“双引号开始的行为注释行，下同<br>“去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">set nocompatible  </span><br><span class="line">“显示行号  </span><br><span class="line">set nummber  </span><br><span class="line">“检测文件的类型  </span><br><span class="line"> filetype on  </span><br><span class="line">“记录历史的行数  </span><br><span class="line">  set history=1000  </span><br><span class="line">   “背景使用黑色  </span><br><span class="line">set background=dark  </span><br><span class="line">“语法高亮度显示  </span><br><span class="line">  syntax on  </span><br><span class="line"> </span><br><span class="line">“下面两行在进行编写代码时，在格式对起上很有用；  </span><br><span class="line">“第一行，vim使用自动对起，也就是把当前行的对起格式应用到下一行；  </span><br><span class="line">“第二行，依据上面的对起格式，智能的选择对起方式，对于类似C语言编  </span><br><span class="line">“写上很有用  </span><br><span class="line">set autoindent  </span><br><span class="line">set smartindent  </span><br><span class="line">“第一行设置tab键为4个空格，第二行设置当行之间交错时使用4个空格</span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">“设置匹配模式，类似当输入一个左括号时会匹配相应的那个右括号  </span><br><span class="line">set showmatch  </span><br><span class="line">“去除vim的GUI版本中的toolbar  </span><br><span class="line">set guioptions-=T  </span><br><span class="line">“当vim进行编辑时，如果命令错误，会发出一个响声，该设置去掉响声  </span><br><span class="line">set vb t_vb=  </span><br><span class="line">“在编辑过程中，在右下角显示光标位置的状态行  </span><br><span class="line">set ruler  </span><br><span class="line">“默认情况下，寻找匹配是高亮度显示的，该设置关闭高亮显示  </span><br><span class="line">set nohls  </span><br><span class="line">“查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一</span><br><span class="line">“个b开头的单词，当输入到/bo时，会自动找到第一个bo开头的单词，依</span><br><span class="line">“次类推，进行查找时，使用此设置会快速找到答案，当你找要匹配的单词</span><br><span class="line">“时，别忘记回车</span><br><span class="line">set incsearch</span><br><span class="line">“修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀</span><br><span class="line">if has(“vms”)</span><br><span class="line">   set nobackup</span><br><span class="line">else</span><br><span class="line">   set backup</span><br><span class="line">endif</span><br><span class="line"> </span><br><span class="line">如果去除注释后，一个完整的.vimrc配置信息如下所示：</span><br><span class="line"> </span><br><span class="line">set nocompatible</span><br><span class="line">set nummber</span><br><span class="line">filetype on</span><br><span class="line">set history=1000</span><br><span class="line">set background=dark</span><br><span class="line">syntax on</span><br><span class="line">set autoindent</span><br><span class="line">set smartindent</span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">set showmatch</span><br><span class="line">set guioptions-=T</span><br><span class="line">set vb t_vb=</span><br><span class="line">set ruler</span><br><span class="line">set nohls</span><br><span class="line">set incsearch</span><br><span class="line">if has(“vms”)</span><br><span class="line">   set nobackup</span><br><span class="line">else</span><br><span class="line">   set backup</span><br><span class="line">endif</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">如果设置完后，发现功能没有起作用，检查一下系统下是否安装了vim-enhanced包，查询命令为：</span><br><span class="line">$rpm –q vim-enhanced</span><br></pre></td></tr></table></figure></p>
-<p>参考资料：</p>
-<ol>
-<li>vim的完全翻译版在下面连接处可以找到<br><a href="http://vimcdoc.sourceforge.net/" target="_blank" rel="noopener">http://vimcdoc.sourceforge.net/</a><br>可以下栽其中的一个PDF版本，里面介绍的很详细，强烈推荐：）   </li>
-<li>更详细的vim信息可以访问：<br><a href="http://www.vim.org/" target="_blank" rel="noopener">http://www.vim.org/</a>   </li>
-<li>一个带有英文注释的.vimrc例子<br><a href="http://www.vi-improved.org/vimrc.php" target="_blank" rel="noopener">http://www.vi-improved.org/vimrc.php</a></li>
+        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>主动设置defaultencoding。（默认的是ascii）</li>
+<li>代码文件的保存格式要与文件头部的# coding:xxx一致</li>
+<li>如果是中文，程序内部尽量使用unicode，而不用str</li>
+<li>不确定是否是unicode<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#unicode/str 转换为 str</span><br><span class="line">if isinstance(key, unicode):</span><br><span class="line">            key = key.encode(&apos;utf-8&apos;)</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h2 id="str与字节码"><a href="#str与字节码" class="headerlink" title="str与字节码"></a>str与字节码</h2><p><code>s = &quot;人生苦短&quot;</code><br>s是个字符串，它本身存储的就是字节码,字节码有编码格式</p>
+<h2 id="unicode与str"><a href="#unicode与str" class="headerlink" title="unicode与str"></a>unicode与str</h2><p>unicode是一种编码标准，具体的实现标准可能是utf-8，utf-16，gbk<br>python 在内部使用两个字节来存储一个unicode，使用unicode对象而不是str的好处，就是unicode方便于跨平台。</p>
+<p>你可以用如下两种方式定义一个unicode:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 = u&quot;人生苦短&quot;</span><br><span class="line">s2 = unicode(&quot;人生苦短&quot;, &quot;utf-8&quot;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="encode与decode"><a href="#encode与decode" class="headerlink" title="encode与decode"></a>encode与decode</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line">su = &quot;人生苦短&quot;</span><br><span class="line"># ： su是一个utf-8格式的字节串</span><br><span class="line">u  = s.decode(&quot;utf-8&quot;)</span><br><span class="line"># ： s被解码为unicode对象，赋给u</span><br><span class="line">sg = u.encode(&quot;gbk&quot;)</span><br><span class="line"># ： u被编码为gbk格式的字节串，赋给sg</span><br><span class="line">print sg</span><br><span class="line"># 打印sg</span><br></pre></td></tr></table></figure>
+<h2 id="文件头声明编码的作用：-coding-utf-8"><a href="#文件头声明编码的作用：-coding-utf-8" class="headerlink" title="文件头声明编码的作用：# -*- coding: utf-8 -*-"></a>文件头声明编码的作用：<code># -*- coding: utf-8 -*-</code></h2><p><em>. 如果代码中有中文注释，就需要此声明
+</em>. 比较高级的编辑器（比如我的emacs），会根据头部声明，将此作为代码文件的格式。<br>*. 程序会通过头部声明，解码初始化 u”人生苦短”，这样的unicode对象，（所以头部声明和代码的存储格式要一致）</p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://wklken.me/posts/2013/08/31/python-extra-coding-intro.html" target="_blank" rel="noopener">http://wklken.me/posts/2013/08/31/python-extra-coding-intro.html</a><br><a href="http://python.jobbole.com/81244/" target="_blank" rel="noopener">http://python.jobbole.com/81244/</a></p>
 
       
 
@@ -740,22 +462,11 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ubuntu vim, vim设置, vim</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-06-04-ubuntu-vim-she-zhi/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/20/python-unicode/">展开全文 >></a>
         </p>
       
 
@@ -785,27 +496,28 @@
 
 
   
-    <article id="post-2015-2015-07-13-nginx-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-正则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-07-13-nginx-2/">nginx https</a>
+      <a class="article-title" href="/2017/12/14/正则/">正则</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-07-13-nginx-2/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.720Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2017/12/14/正则/" class="archive-article-date">
+  	<time datetime="2017-12-14T08:41:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04</a></p>
+        <p>正则是工作中常用的一个知识点：<br>基础知识<br><img src="/images/zhengze_base.png" alt></p>
+<p>参考：<br><a href="https://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" target="_blank" rel="noopener">https://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html</a></p>
 
       
 
@@ -818,7 +530,298 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-07-13-nginx-2/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/12/14/正则/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-代码规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/13/代码规范/">pycharm-pep8</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/13/代码规范/" class="archive-article-date">
+  	<time datetime="2017-12-13T05:44:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###代码规范<br>最近提交PR老是被因为一些代码规范问题别指出，自己表示不开心，但确实事自己问题，为什么不提前格式化代码呢？<br>目前几乎大部分的编译器都有代码格式化功能，以及代码规范检测<br>这里总结下我目前使用的语言的相应编译器的设置</p>
+<p>###python<br>遵守pep8规范<br>见：<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a></p>
+<p>*. pycharm<br>默认安装的pycharm会提示警告，你也可以修改<br><img src="/images/pycharm-pep8-warning.jpg" alt><br>你也可以设置，在：设置中搜索inspections，然后找到“PEP 8 coding style violation”，进行设置</p>
+<p>###go </p>
+<p>###</p>
+<p>参考链接：<br><a href="https://www.zhihu.com/question/37787004" target="_blank" rel="noopener">https://www.zhihu.com/question/37787004</a><br><a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank" rel="noopener">http://blog.csdn.net/u013088062/article/details/50113593</a><br><a href="https://wangye.org/blog/archives/914/" target="_blank" rel="noopener">https://wangye.org/blog/archives/914/</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代码规范</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/13/代码规范/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Heapster" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/29/Heapster/">Heapster</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/29/Heapster/" class="archive-article-date">
+  	<time datetime="2017-11-29T03:40:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Heapster 介绍</p>
+<p>Heapster会收集集群中的node，namespace，pod等级别的metric信息，对这些数据聚合之后存储到指定的后端存储系统中。Heapster是通过访问node上的kubelet的API来获取metric数据，而kubelet中聚合了cAdvisor这个工具采集当前节点的所有容器的性能数据。目前Heapster支持的后端数据库包括memory、InfluxDB、BigQuery、 Google Cloud Monitoring 和 Google Cloud Logging等。<br>Heapster收集到的metric数据可以通过restAPI访问，主要是CPU和内存数据，包括集群级别，node级别，namespace级别，pod级别，容器级别的metric数据。</p>
+<p>参考链接：</p>
+<blockquote>
+<p>Heapster架构 <a href="https://jimmysong.io/posts/using-heapster-to-get-object-metrics/" target="_blank" rel="noopener">https://jimmysong.io/posts/using-heapster-to-get-object-metrics/</a><br><a href="https://zhangchenchen.github.io/2017/10/29/kubernetes-monitoring-guide/" target="_blank" rel="noopener">https://zhangchenchen.github.io/2017/10/29/kubernetes-monitoring-guide/</a><br>监控点：<a href="https://github.com/kubernetes/heapster/blob/master/docs/model.md" target="_blank" rel="noopener">https://github.com/kubernetes/heapster/blob/master/docs/model.md</a></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/29/Heapster/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-virtualbox网络设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/19/virtualbox网络设置/">virtualbox网络设置</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/19/virtualbox网络设置/" class="archive-article-date">
+  	<time datetime="2017-11-19T04:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Net-Address-模式"><a href="#Net-Address-模式" class="headerlink" title="Net Address 模式"></a>Net Address 模式</h2><p>该模式可以自己设置网络</p>
+<ol>
+<li>新建网络<br>在virtualbox的‘virtualbox’ -&gt; ‘preferences（设置）’ 里面，点击‘网络’,<br>点击新加，可以增加网络，记得设置网络段，<br><img src="/images/virtualbox-preferences-network-new.jpg" alt><br>其中端口转发可以把某个ip的端口映射到主机端口，一个用途就是从主机连接虚拟机<br>如：连接ip 为192.168.15.2的机器，增加端口转发： 2202 -&gt;192.168.15.2:22<br>然后ssh -p 2202 <a href="mailto:root@127.0.0.1" target="_blank" rel="noopener">root@127.0.0.1</a> 即是访问192.168.15.2:22</li>
+</ol>
+<p>2.虚拟机的网络选择自己刚创建的网络即可<br><img src="/images/virtualbox-network-setting.jpg" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/19/virtualbox网络设置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-centos7初始化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/19/centos7初始化/">centos7 初始化</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/19/centos7初始化/" class="archive-article-date">
+  	<time datetime="2017-11-19T04:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><p><a href="https://jingyan.baidu.com/article/a3aad71aa180e7b1fa009676.html" target="_blank" rel="noopener">安装教程</a> </p>
+<h2 id="配置网卡"><a href="#配置网卡" class="headerlink" title="配置网卡"></a>配置网卡</h2><p>centos7 默认不再是eth0,是一个随机值<br>修改文件：/etc/sysconfig/network-scripts/ifcfg-enp0s3 (其中enp0s3是随机值)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=yes</span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=yes</span><br><span class="line">IPV6_AUTOCONF=yes</span><br><span class="line">IPV6_DEFROUTE=yes</span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">IPV6_ADDR_GEN_MODE=stable-privacy</span><br><span class="line">NAME=enp0s3</span><br><span class="line">UUID=5229b41e-c936-49b8-bfe6-179bd04dd899</span><br><span class="line">DEVICE=enp0s3</span><br><span class="line">ONBOOT=no</span><br><span class="line">IPADDR=192.168.15.11</span><br><span class="line">GATEWAY=192.168.15.1</span><br><span class="line">NETWASK=255.255.255.0</span><br><span class="line">DNS1=192.168.15.1</span><br></pre></td></tr></table></figure></p>
+<h2 id="然后重启网卡"><a href="#然后重启网卡" class="headerlink" title="然后重启网卡"></a>然后重启网卡</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifdown enp0s3;ifup enp0s3</span><br></pre></td></tr></table></figure>
+<p>查看ip，centos默认没<code>ifconfig</code>，用<code>ip ad</code></p>
+<h2 id="设置源"><a href="#设置源" class="headerlink" title="设置源"></a>设置源</h2><p><a href="http://mirrors.aliyun.com/help/centos" target="_blank" rel="noopener">阿里源</a><br><a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">163</a>  </p>
+<ol>
+<li><p>生成缓存   </p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+<li><p>安装第三方包，如htop，请先安装epel  </p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ol>
+<h2 id="安装常用包"><a href="#安装常用包" class="headerlink" title="安装常用包"></a>安装常用包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y htop net-tools wget curl bash-completion</span><br></pre></td></tr></table></figure>
+<h3 id="设置内核支持-memory-and-swap-accounting"><a href="#设置内核支持-memory-and-swap-accounting" class="headerlink" title="设置内核支持 memory and swap accounting"></a>设置内核支持 memory and swap accounting</h3><p>修改：/etc/default/grub,在GRUB_CMDLINE_LINUX一行内追加增加如下的参数<br>GRUB_CMDLINE_LINUX=”cgroup_enable=memory swapaccount=1”</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/19/centos7初始化/">展开全文 >></a>
         </p>
       
 

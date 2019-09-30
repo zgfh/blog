@@ -160,27 +160,27 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-go-start-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-qi-niu-shang-chuan-qian-duan-shi-li" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/08/go-start-md/">go_start.md</a>
+      <a class="article-title" href="/2015/04/23/qi-niu-shang-chuan-qian-duan-shi-li/">七牛上传前端实例</a>
     </h1>
   
 
         
-        <a href="/2018/01/08/go-start-md/" class="archive-article-date">
-  	<time datetime="2018-01-08T14:08:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
+        <a href="/2015/04/23/qi-niu-shang-chuan-qian-duan-shi-li/" class="archive-article-date">
+  	<time datetime="2015-04-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>环境准备教程： <a href="https://www.jianshu.com/p/eb35a47a157e" target="_blank" rel="noopener">https://www.jianshu.com/p/eb35a47a157e</a><br>测试用例：<a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/11.3.md" target="_blank" rel="noopener">https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/11.3.md</a><br>go init: <a href="http://blog.csdn.net/rznice/article/details/18987047" target="_blank" rel="noopener">http://blog.csdn.net/rznice/article/details/18987047</a></p>
+        <p><body><br>    <form method="post" action="http://up.qiniu.com" enctype="multipart/form-data"><br>    <ul><br>        <li><br>            <label for="token">token:</label><br>            <input id="token" name="token" class="ipt" value><br>        </li><br>        <li><br>            <label for="key">上传的图片名，请自行排重:</label><br>            <input name="key" class="ipt" id="key" value="admin-xxxx.jpg"><br>        </li><br>        <li><br>            <label for="bucket">照片:</label><br>            <input name="file" class="ipt" type="file"><br>        </li><br>        <li><br>            <input type="submit" value="提交"><br>        </li><br>    </ul><br></form><br></body><br></p>
 
       
 
@@ -193,7 +193,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/08/go-start-md/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/23/qi-niu-shang-chuan-qian-duan-shi-li/">展开全文 >></a>
         </p>
       
 
@@ -223,31 +223,31 @@
 
 
   
-    <article id="post-PWD-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-java-double-jing-du-fan-wei" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/08/PWD-md/">PWD.md</a>
+      <a class="article-title" href="/2015/04/20/java-double-jing-du-fan-wei/">java double 精度范围</a>
     </h1>
   
 
         
-        <a href="/2018/01/08/PWD-md/" class="archive-article-date">
-  	<time datetime="2018-01-08T12:43:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-08</time>
+        <a href="/2015/04/20/java-double-jing-du-fan-wei/" class="archive-article-date">
+  	<time datetime="2015-04-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#安装 docker machin<br>见：<a href="https://docs.docker.com/machine/install-machine/#install-machine-directly" target="_blank" rel="noopener">https://docs.docker.com/machine/install-machine/#install-machine-directly</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` &gt;/tmp/docker-machine &amp;&amp; \</span><br><span class="line">chmod +x /tmp/docker-machine &amp;&amp; \</span><br><span class="line">sudo cp /tmp/docker-machine /usr/local/bin/docker-machine</span><br></pre></td></tr></table></figure></p>
-<p>#安装 docker-machine-driver-pwd<br><a href="https://github.com/play-with-docker/docker-machine-driver-pwd" target="_blank" rel="noopener">https://github.com/play-with-docker/docker-machine-driver-pwd</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/play-with-docker/docker-machine-driver-pwd/releases/download/v0.0.5/docker-machine-driver.tar</span><br><span class="line">tar -vxf docker-machine-driver.tar</span><br><span class="line">mv `dpkg --print-architecture`/docker-machine-driver-pwd /usr/local/bin/docker-machine-driver-pwd</span><br></pre></td></tr></table></figure></p>
-<p>#创建机器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Create a session in play-with-docker.com and set the PWD_URL env variable</span><br><span class="line">export PWD_URL=https://labs.play-with-docker.com/p/b99mkeol9m7g00f57fng</span><br><span class="line">docker-machine create -d pwd --pwd-url $PWD_URL node1</span><br><span class="line">eval $(docker-machine env node1)</span><br><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-<p>#参考<br><a href="http://training.play-with-docker.com/" target="_blank" rel="noopener">http://training.play-with-docker.com/</a><br>创建失败可能需要重新开一个session试试： <a href="https://github.com/play-with-docker/docker-machine-driver-pwd/issues/11" target="_blank" rel="noopener">https://github.com/play-with-docker/docker-machine-driver-pwd/issues/11</a></p>
+        <ul>
+<li>float：2^23 = 8388608，一共七位，由于最左为1的一位省略了，这意味着最多能表示8位数： 2*8388608 = 16777216 。有8位有效数字，但绝对能保证的为<strong>7位</strong>，也即float的精度为7~8位有效数字；</li>
+<li>double：2^52 = 4503599627370496，一共<strong>16位</strong>，同理，double的精度为16~17位。<br>之所以不能用f1==f2来判断两个数相等，是因为虽然f1和f2在可能是两个不同的数字，但是受到浮点数表示精度的限制，有可能会错误的判断两个数相等！</li>
+</ul>
+<p><a href="http://blog.csdn.net/zq602316498/article/details/41148063" target="_blank" rel="noopener">http://blog.csdn.net/zq602316498/article/details/41148063</a></p>
 
       
 
@@ -260,7 +260,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/08/PWD-md/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/20/java-double-jing-du-fan-wei/">展开全文 >></a>
         </p>
       
 
@@ -290,250 +290,54 @@
 
 
   
-    <article id="post-python-unicode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-tomcat-service-xiang-guan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/20/python-unicode/">python unicode</a>
+      <a class="article-title" href="/2015/04/19/tomcat-service-xiang-guan/">tomcat service 相关（windows）</a>
     </h1>
   
 
         
-        <a href="/2017/12/20/python-unicode/" class="archive-article-date">
-  	<time datetime="2017-12-20T03:40:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
+        <a href="/2015/04/19/tomcat-service-xiang-guan/" class="archive-article-date">
+  	<time datetime="2015-04-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>主动设置defaultencoding。（默认的是ascii）</li>
-<li>代码文件的保存格式要与文件头部的# coding:xxx一致</li>
-<li>如果是中文，程序内部尽量使用unicode，而不用str</li>
-<li>不确定是否是unicode<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#unicode/str 转换为 str</span><br><span class="line">if isinstance(key, unicode):</span><br><span class="line">            key = key.encode(&apos;utf-8&apos;)</span><br></pre></td></tr></table></figure>
+        <p>由于需要一台电脑安装多个tomcat服务。所有没有安装tomcat.exe版  </p>
+<p>1.tomcat安装  </p>
+<ul>
+<li>下载zip包</li>
+<li>配置了JAVA_HOME    </li>
+<li>点击tomcat目录下的/bin/startup.bat 或  cmd到tomcat/bin目录： catalina.bat run 即可运行  </li>
+</ul>
+<p>2.tomcat制作成服务配置  </p>
+<ul>
+<li>cmd到tomcat/bin目录：  </li>
+<li>service.bat  install  服务名   </li>
+<li>可以在 管理–服务中找到你刚注册的服务名，进行启动，关闭  </li>
+<li><p>也可以cmd下：     net start/stop  服务名  </p>
+<p><strong>卸载服务 service.bat  uninstall  服务名</strong>  </p>
 </li>
-</ol>
-<h2 id="str与字节码"><a href="#str与字节码" class="headerlink" title="str与字节码"></a>str与字节码</h2><p><code>s = &quot;人生苦短&quot;</code><br>s是个字符串，它本身存储的就是字节码,字节码有编码格式</p>
-<h2 id="unicode与str"><a href="#unicode与str" class="headerlink" title="unicode与str"></a>unicode与str</h2><p>unicode是一种编码标准，具体的实现标准可能是utf-8，utf-16，gbk<br>python 在内部使用两个字节来存储一个unicode，使用unicode对象而不是str的好处，就是unicode方便于跨平台。</p>
-<p>你可以用如下两种方式定义一个unicode:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 = u&quot;人生苦短&quot;</span><br><span class="line">s2 = unicode(&quot;人生苦短&quot;, &quot;utf-8&quot;)</span><br></pre></td></tr></table></figure></p>
-<h2 id="encode与decode"><a href="#encode与decode" class="headerlink" title="encode与decode"></a>encode与decode</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line">su = &quot;人生苦短&quot;</span><br><span class="line"># ： su是一个utf-8格式的字节串</span><br><span class="line">u  = s.decode(&quot;utf-8&quot;)</span><br><span class="line"># ： s被解码为unicode对象，赋给u</span><br><span class="line">sg = u.encode(&quot;gbk&quot;)</span><br><span class="line"># ： u被编码为gbk格式的字节串，赋给sg</span><br><span class="line">print sg</span><br><span class="line"># 打印sg</span><br></pre></td></tr></table></figure>
-<h2 id="文件头声明编码的作用：-coding-utf-8"><a href="#文件头声明编码的作用：-coding-utf-8" class="headerlink" title="文件头声明编码的作用：# -*- coding: utf-8 -*-"></a>文件头声明编码的作用：<code># -*- coding: utf-8 -*-</code></h2><p><em>. 如果代码中有中文注释，就需要此声明
-</em>. 比较高级的编辑器（比如我的emacs），会根据头部声明，将此作为代码文件的格式。<br>*. 程序会通过头部声明，解码初始化 u”人生苦短”，这样的unicode对象，（所以头部声明和代码的存储格式要一致）</p>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="http://wklken.me/posts/2013/08/31/python-extra-coding-intro.html" target="_blank" rel="noopener">http://wklken.me/posts/2013/08/31/python-extra-coding-intro.html</a><br><a href="http://python.jobbole.com/81244/" target="_blank" rel="noopener">http://python.jobbole.com/81244/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/20/python-unicode/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-正则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/14/正则/">正则</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/14/正则/" class="archive-article-date">
-  	<time datetime="2017-12-14T08:41:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>正则是工作中常用的一个知识点：<br>基础知识<br><img src="/images/zhengze_base.png" alt></p>
-<p>参考：<br><a href="https://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" target="_blank" rel="noopener">https://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/14/正则/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-代码规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/13/代码规范/">pycharm-pep8</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/13/代码规范/" class="archive-article-date">
-  	<time datetime="2017-12-13T05:44:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###代码规范<br>最近提交PR老是被因为一些代码规范问题别指出，自己表示不开心，但确实事自己问题，为什么不提前格式化代码呢？<br>目前几乎大部分的编译器都有代码格式化功能，以及代码规范检测<br>这里总结下我目前使用的语言的相应编译器的设置</p>
-<p>###python<br>遵守pep8规范<br>见：<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">https://www.python.org/dev/peps/pep-0008/</a></p>
-<p>*. pycharm<br>默认安装的pycharm会提示警告，你也可以修改<br><img src="/images/pycharm-pep8-warning.jpg" alt><br>你也可以设置，在：设置中搜索inspections，然后找到“PEP 8 coding style violation”，进行设置</p>
-<p>###go </p>
-<p>###</p>
-<p>参考链接：<br><a href="https://www.zhihu.com/question/37787004" target="_blank" rel="noopener">https://www.zhihu.com/question/37787004</a><br><a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank" rel="noopener">http://blog.csdn.net/u013088062/article/details/50113593</a><br><a href="https://wangye.org/blog/archives/914/" target="_blank" rel="noopener">https://wangye.org/blog/archives/914/</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">代码规范</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/13/代码规范/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Heapster" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/29/Heapster/">Heapster</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/29/Heapster/" class="archive-article-date">
-  	<time datetime="2017-11-29T03:40:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Heapster 介绍</p>
-<p>Heapster会收集集群中的node，namespace，pod等级别的metric信息，对这些数据聚合之后存储到指定的后端存储系统中。Heapster是通过访问node上的kubelet的API来获取metric数据，而kubelet中聚合了cAdvisor这个工具采集当前节点的所有容器的性能数据。目前Heapster支持的后端数据库包括memory、InfluxDB、BigQuery、 Google Cloud Monitoring 和 Google Cloud Logging等。<br>Heapster收集到的metric数据可以通过restAPI访问，主要是CPU和内存数据，包括集群级别，node级别，namespace级别，pod级别，容器级别的metric数据。</p>
-<p>参考链接：</p>
+</ul>
+<p>3.tomcat服务运行参数<br> 直接catalina.bat run 运行的时候，可以在catalina.bat内添加参数<br> 但做成服务后不能使用该方法   </p>
+<ul>
+<li>cmd regedit 打开注册表</li>
+<li>找到 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Apache Software Foundation\Procrun 2.0\Tomcat7\Parameters\JAVA  </li>
+<li>调整Options 或ClassPATH</li>
+</ul>
+<p>  参考：  </p>
 <blockquote>
-<p>Heapster架构 <a href="https://jimmysong.io/posts/using-heapster-to-get-object-metrics/" target="_blank" rel="noopener">https://jimmysong.io/posts/using-heapster-to-get-object-metrics/</a><br><a href="https://zhangchenchen.github.io/2017/10/29/kubernetes-monitoring-guide/" target="_blank" rel="noopener">https://zhangchenchen.github.io/2017/10/29/kubernetes-monitoring-guide/</a><br>监控点：<a href="https://github.com/kubernetes/heapster/blob/master/docs/model.md" target="_blank" rel="noopener">https://github.com/kubernetes/heapster/blob/master/docs/model.md</a></p>
+<p><a href="http://blog.csdn.net/hejielhwx/article/details/10175883" target="_blank" rel="noopener">http://blog.csdn.net/hejielhwx/article/details/10175883</a></p>
+</blockquote>
+<blockquote>
+<p><a href="http://www.blogjava.net/nkjava/archive/2012/03/08/371535.html" target="_blank" rel="noopener">http://www.blogjava.net/nkjava/archive/2012/03/08/371535.html</a></p>
 </blockquote>
 
       
@@ -547,7 +351,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/29/Heapster/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/19/tomcat-service-xiang-guan/">展开全文 >></a>
         </p>
       
 
@@ -577,31 +381,28 @@
 
 
   
-    <article id="post-virtualbox网络设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-docker-images-shan-chu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/19/virtualbox网络设置/">virtualbox网络设置</a>
+      <a class="article-title" href="/2015/04/18/docker-images-shan-chu/">docker images 删除</a>
     </h1>
   
 
         
-        <a href="/2017/11/19/virtualbox网络设置/" class="archive-article-date">
-  	<time datetime="2017-11-19T04:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+        <a href="/2015/04/18/docker-images-shan-chu/" class="archive-article-date">
+  	<time datetime="2015-04-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Net-Address-模式"><a href="#Net-Address-模式" class="headerlink" title="Net Address 模式"></a>Net Address 模式</h2><p>该模式可以自己设置网络</p>
-<ol>
-<li>新建网络<br>在virtualbox的‘virtualbox’ -&gt; ‘preferences（设置）’ 里面，点击‘网络’,<br>点击新加，可以增加网络，记得设置网络段，<br><img src="/images/virtualbox-preferences-network-new.jpg" alt><br>其中端口转发可以把某个ip的端口映射到主机端口，一个用途就是从主机连接虚拟机<br>如：连接ip 为192.168.15.2的机器，增加端口转发： 2202 -&gt;192.168.15.2:22<br>然后ssh -p 2202 <a href="mailto:root@127.0.0.1" target="_blank" rel="noopener">root@127.0.0.1</a> 即是访问192.168.15.2:22</li>
-</ol>
-<p>2.虚拟机的网络选择自己刚创建的网络即可<br><img src="/images/virtualbox-network-setting.jpg" alt></p>
+        <p>docker build images 后会产生好多没有名字的镜像，占空间，还很难查找自己要找的镜像，</p>
+<p>一键删除没有名称的镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images |grep &quot;&lt;none&gt;&quot; |awk &apos;&#123;print $3&#125;&apos; |xargs docker rmi</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -614,7 +415,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/19/virtualbox网络设置/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/18/docker-images-shan-chu/">展开全文 >></a>
         </p>
       
 
@@ -644,41 +445,28 @@
 
 
   
-    <article id="post-centos7初始化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-nginx-websocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/19/centos7初始化/">centos7 初始化</a>
+      <a class="article-title" href="/2015/04/16/nginx-websocket/">nginx websocket</a>
     </h1>
   
 
         
-        <a href="/2017/11/19/centos7初始化/" class="archive-article-date">
-  	<time datetime="2017-11-19T04:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
+        <a href="/2015/04/16/nginx-websocket/" class="archive-article-date">
+  	<time datetime="2015-04-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><p><a href="https://jingyan.baidu.com/article/a3aad71aa180e7b1fa009676.html" target="_blank" rel="noopener">安装教程</a> </p>
-<h2 id="配置网卡"><a href="#配置网卡" class="headerlink" title="配置网卡"></a>配置网卡</h2><p>centos7 默认不再是eth0,是一个随机值<br>修改文件：/etc/sysconfig/network-scripts/ifcfg-enp0s3 (其中enp0s3是随机值)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line">BOOTPROTO=static</span><br><span class="line">DEFROUTE=yes</span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=yes</span><br><span class="line">IPV6_AUTOCONF=yes</span><br><span class="line">IPV6_DEFROUTE=yes</span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">IPV6_ADDR_GEN_MODE=stable-privacy</span><br><span class="line">NAME=enp0s3</span><br><span class="line">UUID=5229b41e-c936-49b8-bfe6-179bd04dd899</span><br><span class="line">DEVICE=enp0s3</span><br><span class="line">ONBOOT=no</span><br><span class="line">IPADDR=192.168.15.11</span><br><span class="line">GATEWAY=192.168.15.1</span><br><span class="line">NETWASK=255.255.255.0</span><br><span class="line">DNS1=192.168.15.1</span><br></pre></td></tr></table></figure></p>
-<h2 id="然后重启网卡"><a href="#然后重启网卡" class="headerlink" title="然后重启网卡"></a>然后重启网卡</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifdown enp0s3;ifup enp0s3</span><br></pre></td></tr></table></figure>
-<p>查看ip，centos默认没<code>ifconfig</code>，用<code>ip ad</code></p>
-<h2 id="设置源"><a href="#设置源" class="headerlink" title="设置源"></a>设置源</h2><p><a href="http://mirrors.aliyun.com/help/centos" target="_blank" rel="noopener">阿里源</a><br><a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">163</a>  </p>
-<ol>
-<li><p>生成缓存   </p>
-<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-<li><p>安装第三方包，如htop，请先安装epel  </p>
-<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-</ol>
-<h2 id="安装常用包"><a href="#安装常用包" class="headerlink" title="安装常用包"></a>安装常用包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y htop net-tools wget curl bash-completion</span><br></pre></td></tr></table></figure>
-<h3 id="设置内核支持-memory-and-swap-accounting"><a href="#设置内核支持-memory-and-swap-accounting" class="headerlink" title="设置内核支持 memory and swap accounting"></a>设置内核支持 memory and swap accounting</h3><p>修改：/etc/default/grub,在GRUB_CMDLINE_LINUX一行内追加增加如下的参数<br>GRUB_CMDLINE_LINUX=”cgroup_enable=memory swapaccount=1”</p>
+        <p>昨天把生成环境弄挂了，<br>一个报表系统用了websocket， 但nginx跳转我只配了http跳转，然后，就跪了</p>
+<p>今天紧急搜寻修复了下，其实挺简单的，加几行配置，不重复了，见官网<br><a href="http://nginx.com/blog/websocket-nginx/" target="_blank" rel="noopener">http://nginx.com/blog/websocket-nginx/</a></p>
 
       
 
@@ -691,7 +479,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/19/centos7初始化/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/16/nginx-websocket/">展开全文 >></a>
         </p>
       
 
@@ -721,40 +509,50 @@
 
 
   
-    <article id="post-centos-http代理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hua-er-nu-li-di-kai" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/centos-http代理/">centos_http代理(ubuntu类似)</a>
+      <a class="article-title" href="/2015/04/14/hua-er-nu-li-di-kai/">花儿努力地开</a>
     </h1>
   
 
         
-        <a href="/2017/11/18/centos-http代理/" class="archive-article-date">
-  	<time datetime="2017-11-18T13:25:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
+        <a href="/2015/04/14/hua-er-nu-li-di-kai/" class="archive-article-date">
+  	<time datetime="2015-04-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本教程基于centos7， ubuntu类似，只需要替换下面的“yum” 为“apt-get” 即可</p>
-<h2 id="安装shadowsocks-并启用socket5代理"><a href="#安装shadowsocks-并启用socket5代理" class="headerlink" title="安装shadowsocks 并启用socket5代理"></a>安装shadowsocks 并启用socket5代理</h2><p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum  install -y python-pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure></p>
-<p>用shadowsocks启动一个socket5代理<br>修改下面的配置，保存到/etc/shadowsocks_local.json(没有就新建一个)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;: &quot;&#123;your-server&#125;&quot;,</span><br><span class="line">  &quot;server_port&quot;: 40002,</span><br><span class="line">  &quot;local_port&quot;: 1080,</span><br><span class="line">  &quot;password&quot;: &quot;&#123;your-password&#125;&quot;,</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sslocal -c /etc/shadowsocks_local.json -d start</span><br></pre></td></tr></table></figure></p>
-<p>测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --socks5-hostname localhost:1080 google.com</span><br></pre></td></tr></table></figure></p>
-<p>如果返回301表示成功</p>
-<h2 id="转socket5为http代理"><a href="#转socket5为http代理" class="headerlink" title="转socket5为http代理"></a>转socket5为http代理</h2><p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y privoxy</span><br></pre></td></tr></table></figure></p>
-<p>配置,在/etc/privoxy/config 增加一行配置，指定上面开的socks5的端口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;forward-socks5 / 127.0.0.1:1080 .&quot; &gt;&gt;/etc/privoxy/config</span><br></pre></td></tr></table></figure></p>
-<p>启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service privoxy start</span><br></pre></td></tr></table></figure></p>
-<p>测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --proxy localhost:8118 google.com</span><br></pre></td></tr></table></figure></p>
-<p>如果返回301表示成功</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>打开终端口，先导入环境变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export PROXY_PORT=8118</span><br><span class="line">export PROXY_IP=127.0.0.1</span><br><span class="line">export http_proxy=http://$PROXY_IP:$PROXY_PORT</span><br><span class="line">export HTTP_PROXY=$http_proxy</span><br><span class="line">export https_proxy=$http_proxy</span><br><span class="line">export HTTPS_PROXY=$http_proxy</span><br><span class="line">export no_proxy=&quot;localhost,127.0.0.1,localaddress,.localdomain.com,example.com,192.168.1.11,192.168.1.12,192.168.1.13&quot;</span><br></pre></td></tr></table></figure></p>
-<p>然后再进行的http访问如果支持HTTP_PROXY环境变量（npm,curl等都支持），就会自动通过代理访问</p>
-<h3 id="另外，设置docker使用代理"><a href="#另外，设置docker使用代理" class="headerlink" title="另外，设置docker使用代理"></a>另外，设置docker使用代理</h3><p><a href="https://docs.docker.com/engine/admin/systemd/#httphttps-proxy" target="_blank" rel="noopener">https://docs.docker.com/engine/admin/systemd/#httphttps-proxy</a></p>
+        <p>你知道,你爱惜,花儿努力地开，</p>
+<p>你不知,你厌恶,花儿努力地开。</p>
+<p>——泰戈尔</p>
+<p>   每一天清晨，太阳升起，月儿落下。日升月落，是自然永恒</p>
+<p>法则。不管晴天雨天，光阴总是在我们的指缝间悄悄的溜走。这</p>
+<p>一天的收获能带给我们惊喜与满足，这一天的失落带给我们的是</p>
+<p>失望和痛苦。可是这些又怎么能够阻止他的晃然一现？曾经读过</p>
+<p>不少网络上的禅文，自认没有修佛的那份清心和悟心。但是记忆</p>
+<p>里感受最深刻的一句话就是：开心是一天，痛苦也是一天，你该</p>
+<p>怎么选择过这一天？亦如花儿，有人眷顾要绽放，没人欣赏也要</p>
+<p>绽放。因此，应该努力为自己而绽放！</p>
+<p>   知道心静如水是一份高境界，可不管怎么摒弃杂念，心里还</p>
+<p>是会微澜乍起，涟漪涟涟。平凡的人是很难达到那么高境界的，</p>
+<p>既然如此，那就从平凡做起，从简单开心做起。简单开心的做自</p>
+<p>己，采集生活中的点滴，点缀自己走过的每一步路，让每一步走</p>
+<p>过的路在自己的心里跳舞，在自己的心里开花。就象花儿努力地</p>
+<p>开，不论开心与否都尽情的盛开，开出自己的灿烂与芬芳。可能</p>
+<p>这一路会有呵护花的人出现，他会和你一起陶醉，和你一起欣</p>
+<p>赏，陪你一起凋落。花儿努力地开，那就是它用心的去感激他的</p>
+<p>陪伴，珍惜他的爱心，收获他的付出。再用自己的芳香做礼物，</p>
+<p>即使碾落成泥，也要芳香如故。</p>
+<p>   “生如夏花之绚烂，死如秋叶之静美”。美好的日子总是一天</p>
+<p>天的流逝，抛弃流逝中的种种无奈、不甘，选择简单开心的度</p>
+<p>过，是花儿的选择。为此，花儿自当努力地开！</p>
 
       
 
@@ -767,7 +565,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/18/centos-http代理/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/14/hua-er-nu-li-di-kai/">展开全文 >></a>
         </p>
       
 
@@ -797,38 +595,195 @@
 
 
   
-    <article id="post-k8s安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-jar-logger-wen-ti" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/k8s安装/">k8s安装</a>
+      <a class="article-title" href="/2015/04/11/jar-logger-wen-ti/">jar logger 问题</a>
     </h1>
   
 
         
-        <a href="/2017/11/18/k8s安装/" class="archive-article-date">
-  	<time datetime="2017-11-18T10:20:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
+        <a href="/2015/04/11/jar-logger-wen-ti/" class="archive-article-date">
+  	<time datetime="2015-04-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h2><p><a href="/2017/11/18/centos-http代理/">代理安装</a><br>在当前shell启用代理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export PROXY_PORT=8118</span><br><span class="line">export PROXY_IP=192.168.15.11</span><br><span class="line">export http_proxy=http://$PROXY_IP:$PROXY_PORT</span><br><span class="line">export HTTP_PROXY=$http_proxy</span><br><span class="line">export https_proxy=$http_proxy</span><br><span class="line">export HTTPS_PROXY=$http_proxy</span><br><span class="line">export no_proxy=&quot;localhost,127.0.0.1,localaddress,.localdomain.com,example.com,192.168.1.11,192.168.1.12,192.168.1.13&quot;</span><br></pre></td></tr></table></figure></p>
-<h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable iptables-services firewalld</span><br><span class="line">systemctl stop iptables-services firewalld</span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF &gt;  /etc/sysctl.d/k8s.conf</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">net.bridge.bridge-nf-call-iptables = 1</span><br><span class="line">EOF</span><br><span class="line">sysctl --system</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">curl https://get.docker.com/|sh</span><br><span class="line">systemctl enable docker &amp;&amp; systemctl start docker</span><br></pre></td></tr></table></figure>
-<h2 id="安装-kubeadm-kubelet-kubectl"><a href="#安装-kubeadm-kubelet-kubectl" class="headerlink" title="安装 kubeadm,kubelet,kubectl"></a>安装 kubeadm,kubelet,kubectl</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line">setenforce 0</span><br><span class="line">yum install -y kubelet kubeadm kubectl</span><br><span class="line">source &lt;(kubectl completion bash)</span><br><span class="line">echo &quot;source &lt;(kubectl completion bash)&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">#journalctl -xeu kubelet</span><br></pre></td></tr></table></figure>
-<h2 id="运行-k8s"><a href="#运行-k8s" class="headerlink" title="运行 k8s"></a>运行 k8s</h2><ol>
-<li>Initializes cluster master node:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init --pod-network-cidr=192.168.0.0/16</span><br></pre></td></tr></table></figure>
+        <p>因为jar一般是作为别的项目依赖，所以最好不要直接指定日志的实现。  </p>
+<ul>
+<li>之前写项目，一般是加个logback什么的，再加个配置文件就可以输出log了，但现在是做成jar,就不能乱玩了，否则别人依赖后怎么控制你的日志输出呢？</li>
+</ul>
+<h3 id="slf4j"><a href="#slf4j" class="headerlink" title="slf4j"></a>slf4j</h3><p>百度了下，才知道slf4j，它提供一个标准的logger api,本身不提供log的实现，是具体运行的项目的时候再去知道，（详细百度‘slf4j’）<br>so,只需要加上这个就解决问题了。</p>
+<ul>
+<li>同时，为了测试输出日志，可以添加slf4j-simple，maven项目可以加只限于test的时候使用，这样打包完成后，是没有指定日志实现的，具体的实现交给用户选择。  </li>
+</ul>
+<p>如下：</p>
+<pre><code>&lt;!-- Logging with SLF4J --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+        &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+        &lt;version&gt;1.7.7&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- 测试使用 --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+        &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
+        &lt;version&gt;1.7.7&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jar logger, jar log</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/11/jar-logger-wen-ti/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-shu-ju-ku-cao-zuo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/08/shu-ju-ku-cao-zuo/">数据库操作</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/08/shu-ju-ku-cao-zuo/" class="archive-article-date">
+  	<time datetime="2015-04-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MySQL添加用户、删除用户与授权<br>MySql中添加用户,新建数据库,用户授权,删除用户,修改密码(注意每行后边都跟个;表示一个命令语句结束):</p>
+<p>1.新建用户</p>
+<p>　　1.1 登录MYSQL：</p>
+<p>　　@&gt;mysql -u root -p</p>
+<p>　　@&gt;密码</p>
+<p>　　1.2 创建用户：</p>
+<p>　　mysql&gt; insert into mysql.user(Host,User,Password) values(“localhost”,”test”,password(“1234”));</p>
+<p>　　这样就创建了一个名为：test 密码为：1234 的用户。</p>
+<p>　　注意：此处的”localhost”，是指该用户只能在本地登录，不能在另外一台机器上远程登录。如果想远程登录的话，将”localhost”改为”%”，表示在任何一台电脑上都可以登录。也可以指定某台机器可以远程登录。</p>
+<p>　　1.3 然后登录一下：</p>
+<p>　　mysql&gt;exit;</p>
+<p>　　@&gt;mysql -u test -p</p>
+<p>　　@&gt;输入密码</p>
+<p>　　mysql&gt;登录成功</p>
+<p>2.为用户授权</p>
+<p>　　授权格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
+<p>　　2.1 登录MYSQL（有ROOT权限），这里以ROOT身份登录：</p>
+<p>　　@&gt;mysql -u root -p</p>
+<p>　　@&gt;密码</p>
+<p>　　2.2 首先为用户创建一个数据库(testDB)：</p>
+<p>　　mysql&gt;create database testDB;</p>
+<p>　　2.3 授权test用户拥有testDB数据库的所有权限（某个数据库的所有权限）：</p>
+<p>　　 mysql&gt;grant all privileges on testDB.* to test@localhost identified by ‘1234’;</p>
+<p> 　　mysql&gt;flush privileges;//刷新系统权限表</p>
+<p>　　格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
+<p>　　2.4 如果想指定部分权限给一用户，可以这样来写:</p>
+<p>　　mysql&gt;grant select,update on testDB.* to test@localhost identified by ‘1234’;</p>
+<p>　　mysql&gt;flush privileges; //刷新系统权限表</p>
+<p>　　2.5 授权test用户拥有所有数据库的某些权限： 　 </p>
+<p>　　mysql&gt;grant select,delete,update,create,drop on <em>.</em> to test@”%” identified by “1234”;</p>
+<pre><code>//test用户对所有数据库都有select,delete,update,create,drop 权限。
+</code></pre><p>　 //@”%” 表示对所有非本地主机授权，不包括localhost。（localhost地址设为127.0.0.1，如果设为真实的本地地址，不知道是否可以，没有验证。）</p>
+<p>　//对localhost授权：加上一句grant all privileges on testDB.* to test@localhost identified by ‘1234’;即可。</p>
+<ol start="3">
+<li><p>删除用户</p>
+<p>　　@&gt;mysql -u root -p</p>
 </li>
 </ol>
-<p>如果kubelet启动不起来，查看下日志<code>journalctl -xeu kubelet</code><br>*. not work with enabled swap<br>添加下面的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;Environment=&quot;KUBELET_EXTRA_ARGS=--fail-swap-on=false&quot;&apos; &gt; /etc/systemd/system/kubelet.service.d/90-local-extras.conf</span><br></pre></td></tr></table></figure></p>
-<p>2.Initialize cluster networking:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://docs.projectcalico.org/v2.6/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml</span><br></pre></td></tr></table></figure></p>
-<p>3.(Optional) Initialize kube-dashboard:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L -s https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml  | kubectl apply -f -</span><br></pre></td></tr></table></figure></p>
-<p>访问： <a href="https://127.0.0.1:8443" target="_blank" rel="noopener">https://127.0.0.1:8443</a><br>访问不了，：<a href="https://github.com/kubernetes/dashboard/wiki/Access-control" target="_blank" rel="noopener">https://github.com/kubernetes/dashboard/wiki/Access-control</a><br>目前(v1.7.1)不支持手动切换语言：可以通过浏览器插件更改<a href="https://github.com/kubernetes/dashboard/issues/2240" target="_blank" rel="noopener">https://github.com/kubernetes/dashboard/issues/2240</a><br>4.如果是单节点需要允许主节点可部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="安装监控-heapster"><a href="#安装监控-heapster" class="headerlink" title="安装监控 heapster"></a>安装监控 heapster</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f  https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/influxdb.yaml</span><br><span class="line">kubectl create -f  https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/heapster.yaml</span><br><span class="line">kubectl create -f  https://raw.githubusercontent.com/kubernetes/heapster/master/deploy/kube-config/influxdb/grafana.yaml</span><br></pre></td></tr></table></figure>
+<p>　　@&gt;密码</p>
+<p> 　　mysql&gt;Delete FROM user Where User=’test’ and Host=’localhost’;</p>
+<p> 　　mysql&gt;flush privileges;</p>
+<p> 　　mysql&gt;drop database testDB; //删除用户的数据库</p>
+<p>删除账户及权限：&gt;drop user 用户名@’%’;</p>
+<p>　　　　　　　　&gt;drop user 用户名@ localhost; </p>
+<ol start="4">
+<li><p>修改指定用户密码</p>
+<p>　　@&gt;mysql -u root -p</p>
+<p>　　@&gt;密码</p>
+<p>　　mysql&gt;update mysql.user set password=password(‘新密码’) where User=”test” and Host=”localhost”;</p>
+<p>　　mysql&gt;flush privileges;</p>
+</li>
+</ol>
+<ol start="5">
+<li>列出所有数据库</li>
+</ol>
+<p>　　mysql&gt;show database;</p>
+<ol start="6">
+<li>切换数据库</li>
+</ol>
+<p>　　mysql&gt;use ‘数据库名’;</p>
+<ol start="7">
+<li>列出所有表</li>
+</ol>
+<p>　　mysql&gt;show tables;</p>
+<ol start="8">
+<li>显示数据表结构</li>
+</ol>
+<p>　　mysql&gt;describe 表名;</p>
+<ol start="9">
+<li>删除数据库和数据表</li>
+</ol>
+<p>　　mysql&gt;drop database 数据库名;</p>
+<p>　　mysql&gt;drop table 数据表名;</p>
 
       
 
@@ -841,7 +796,143 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/18/k8s安装/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/08/shu-ju-ku-cao-zuo/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-eclipse-huan-jing-pei-zhi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/15/eclipse-huan-jing-pei-zhi/">eclipse 环境配置</a>
+    </h1>
+  
+
+        
+        <a href="/2015/03/15/eclipse-huan-jing-pei-zhi/" class="archive-article-date">
+  	<time datetime="2015-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每次都要配置环境，每次都因为环境遇到各种问题，现在在这里记下来。为了自己，为了新来的同事。</p>
+<p>1.编码，一般都设置为UTF-8,所有的。见：<a href="http://blog.sina.com.cn/s/blog_45dc83410100spq1.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_45dc83410100spq1.html</a><br><a href="http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html</a></p>
+<p>2.注释，最好统一，之后复制改下自己的信息。见:<a href="http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html" target="_blank" rel="noopener">http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html</a></p>
+<p>3.jd-eclipse,一个自动下载jdk和反编译的工具。见：<a href="http://jd.benow.ca/" target="_blank" rel="noopener">http://jd.benow.ca/</a></p>
+<p>4.代码格式，最后大家的每行的代码数等一直，不然每次格式化代码，git就会提示一堆修改。见：<a href="http://blog.zgfh.xyz/?post=16" target="_blank" rel="noopener">http://blog.zgfh.xyz/?post=16</a></p>
+<p>5.字体<br>在菜单windows–&gt;prefereces里面，找到General–&gt;Appearance–&gt;Colors and Fonts，然后在右边找到你要修改的字体或背景，点Edit…即可。<br>比如修改Java的字体，就找Java–&gt;Java Editor Text Font</p>
+<p>6.一些快捷键（主要最后在英文输入法下面，搜狗什么的，有时候会快捷键冲突）<br>ctrl+shift+o 格式化代码  t<br>ctrl+shift+o 快速导入此文件中所有需要导入的类。  </p>
+<p>7.主题：<br>方法2：通过站点更新<br>eclipse：Help-&gt;Install New Software-&gt;Work with:Update Site - <a href="http://eclipse-color-theme.github.com/update" target="_blank" rel="noopener">http://eclipse-color-theme.github.com/update</a><br>MyEclipse：Help-&gt;MyEclipse Confrontation Center-&gt;Software-&gt;add site-&gt;输入name:ColorTheme,URL:<a href="http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal" target="_blank" rel="noopener">http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal</a> Sites下的Eclipse Color Theme下的Eclipse Color Theme右键Add to Profile-&gt;等待五分钟安装插件的时间-&gt;点击右下角的apply changes</p>
+<p>安装的过程中发生了错误，不过貌似没事，顺利安装好了，有点奇怪。<br>安装后需要重启Eclipse。重启后打开Window-&gt;Preferences-&gt;General-&gt;Apperance-&gt;Color Theme(未安装插件前是没有这个选项的)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/03/15/eclipse-huan-jing-pei-zhi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ajaxkua-yu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/13/ajaxkua-yu/">ajax跨域</a>
+    </h1>
+  
+
+        
+        <a href="/2015/03/13/ajaxkua-yu/" class="archive-article-date">
+  	<time datetime="2015-03-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>跨域的解决方式是CORS <a href="http://www.cnblogs.com/Darren_code/p/cors.html" target="_blank" rel="noopener">CORS介绍</a><br>弄了好久，其实只要允许options请求，在head内加入标识允许字段即可。<br>但是老项目的原因，权限动不了，options会302跳登录界面<br>就想到用nginx前端过滤<br>1.正常情况下，跳转到服务器<br>2.遇到options请求，直接返回，并带上指定head  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">               if ($request_method = OPTIONS ) &#123;</span><br><span class="line">               add_header Access-Control-Allow-Origin &quot;*&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Methods &quot;POST, GET, PUT, OPTIONS, DELETE&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept, Authorization&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Credentials &quot;true&quot;;</span><br><span class="line">               add_header Content-Length 0;</span><br><span class="line">               add_header  Access-Control-Max-Age 3600;</span><br><span class="line">               add_header Content-Type text/plain;</span><br><span class="line">               return 200;</span><br><span class="line">                &#125;</span><br><span class="line">               proxy_pass http://zzg-dev.zgfh.xyz;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<p>问题：目前ajax跨区不允许302等跳转，感觉没必要，就没再查解决方法</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/03/13/ajaxkua-yu/">展开全文 >></a>
         </p>
       
 

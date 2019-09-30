@@ -160,28 +160,28 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2015-2015-04-16-nginx-websocket" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-nginx-base-auth" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-04-16-nginx-websocket/">nginx websocket</a>
+      <a class="article-title" href="/2016/04/20/nginx-base-auth/">nginx base auth</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-04-16-nginx-websocket/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2016/04/20/nginx-base-auth/" class="archive-article-date">
+  	<time datetime="2016-04-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天把生成环境弄挂了，<br>一个报表系统用了websocket， 但nginx跳转我只配了http跳转，然后，就跪了</p>
-<p>今天紧急搜寻修复了下，其实挺简单的，加几行配置，不重复了，见官网<br><a href="http://nginx.com/blog/websocket-nginx/" target="_blank" rel="noopener">http://nginx.com/blog/websocket-nginx/</a></p>
+        <p>##config<br>增加两行配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    auth_basic           &quot;closed site&quot;;</span><br><span class="line">    auth_basic_user_file conf/htpasswd;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##生成htpasswd<br>生成一个用户名admin，密码admin的帐户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c &quot;echo -n &apos;admin:&apos;&quot; &gt;&gt; htpasswd</span><br><span class="line">sudo sh -c &quot;openssl passwd admin&quot; &gt;&gt; htpasswd</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -194,7 +194,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-04-16-nginx-websocket/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/04/20/nginx-base-auth/">展开全文 >></a>
         </p>
       
 
@@ -224,28 +224,29 @@
 
 
   
-    <article id="post-2015-2015-04-18-docker-images-shan-chu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ghost-shi-yong" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-04-18-docker-images-shan-chu/">docker images 删除</a>
+      <a class="article-title" href="/2016/04/19/ghost-shi-yong/">ghost 使用</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-04-18-docker-images-shan-chu/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2016/04/19/ghost-shi-yong/" class="archive-article-date">
+  	<time datetime="2016-04-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>docker build images 后会产生好多没有名字的镜像，占空间，还很难查找自己要找的镜像，</p>
-<p>一键删除没有名称的镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images |grep &quot;&lt;none&gt;&quot; |awk &apos;&#123;print $3&#125;&apos; |xargs docker rmi</span><br></pre></td></tr></table></figure></p>
+        <p>##增加搜索框<br>教程<br><a href="http://academy.ghost.org/how-to-add-swiftype-search-to-your-ghost-blog/" target="_blank" rel="noopener">http://academy.ghost.org/how-to-add-swiftype-search-to-your-ghost-blog/</a></p>
+<p>##百度流量统计<br><a href="http://sitecenter.baidu.com/sc-web/20271964/home/site/statrule?siteId=8656728" target="_blank" rel="noopener">http://sitecenter.baidu.com/sc-web/20271964/home/site/statrule?siteId=8656728</a></p>
+<p>##加入图片<br><a href="http://support.ghost.org/add-image-post/" target="_blank" rel="noopener">http://support.ghost.org/add-image-post/</a><br><img src alt></p>
 
       
 
@@ -258,7 +259,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-04-18-docker-images-shan-chu/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/04/19/ghost-shi-yong/">展开全文 >></a>
         </p>
       
 
@@ -288,298 +289,57 @@
 
 
   
-    <article id="post-2015-2015-03-12-ubuntu-an-zhuang-pip" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hong-xing-chu-qiang" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-03-12-ubuntu-an-zhuang-pip/">ubuntu 安装 pip</a>
+      <a class="article-title" href="/2016/04/17/hong-xing-chu-qiang/">科学上网</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-03-12-ubuntu-an-zhuang-pip/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2016/04/17/hong-xing-chu-qiang/" class="archive-article-date">
+  	<time datetime="2016-04-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python python-pip</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-03-12-ubuntu-an-zhuang-pip/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-03-13-ajaxkua-yu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-03-13-ajaxkua-yu/">ajax跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2015-03-13-ajaxkua-yu/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>跨域的解决方式是CORS <a href="http://www.cnblogs.com/Darren_code/p/cors.html" target="_blank" rel="noopener">CORS介绍</a><br>弄了好久，其实只要允许options请求，在head内加入标识允许字段即可。<br>但是老项目的原因，权限动不了，options会302跳登录界面<br>就想到用nginx前端过滤<br>1.正常情况下，跳转到服务器<br>2.遇到options请求，直接返回，并带上指定head  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">               if ($request_method = OPTIONS ) &#123;</span><br><span class="line">               add_header Access-Control-Allow-Origin &quot;*&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Methods &quot;POST, GET, PUT, OPTIONS, DELETE&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Headers &quot;Origin, X-Requested-With, Content-Type, Accept, Authorization&quot;;</span><br><span class="line">               add_header Access-Control-Allow-Credentials &quot;true&quot;;</span><br><span class="line">               add_header Content-Length 0;</span><br><span class="line">               add_header  Access-Control-Max-Age 3600;</span><br><span class="line">               add_header Content-Type text/plain;</span><br><span class="line">               return 200;</span><br><span class="line">                &#125;</span><br><span class="line">               proxy_pass http://zzg-dev.zgfh.xyz;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
-<p>问题：目前ajax跨区不允许302等跳转，感觉没必要，就没再查解决方法</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-03-13-ajaxkua-yu/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-03-15-eclipse-huan-jing-pei-zhi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-03-15-eclipse-huan-jing-pei-zhi/">eclipse 环境配置</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2015-03-15-eclipse-huan-jing-pei-zhi/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>每次都要配置环境，每次都因为环境遇到各种问题，现在在这里记下来。为了自己，为了新来的同事。</p>
-<p>1.编码，一般都设置为UTF-8,所有的。见：<a href="http://blog.sina.com.cn/s/blog_45dc83410100spq1.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_45dc83410100spq1.html</a><br><a href="http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/f96699bbb151d6894e3c1b08.html</a></p>
-<p>2.注释，最好统一，之后复制改下自己的信息。见:<a href="http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html" target="_blank" rel="noopener">http://www.cnblogs.com/senzjx/archive/2009/09/21/1570950.html</a></p>
-<p>3.jd-eclipse,一个自动下载jdk和反编译的工具。见：<a href="http://jd.benow.ca/" target="_blank" rel="noopener">http://jd.benow.ca/</a></p>
-<p>4.代码格式，最后大家的每行的代码数等一直，不然每次格式化代码，git就会提示一堆修改。见：<a href="http://blog.zgfh.xyz/?post=16" target="_blank" rel="noopener">http://blog.zgfh.xyz/?post=16</a></p>
-<p>5.字体<br>在菜单windows–&gt;prefereces里面，找到General–&gt;Appearance–&gt;Colors and Fonts，然后在右边找到你要修改的字体或背景，点Edit…即可。<br>比如修改Java的字体，就找Java–&gt;Java Editor Text Font</p>
-<p>6.一些快捷键（主要最后在英文输入法下面，搜狗什么的，有时候会快捷键冲突）<br>ctrl+shift+o 格式化代码  t<br>ctrl+shift+o 快速导入此文件中所有需要导入的类。  </p>
-<p>7.主题：<br>方法2：通过站点更新<br>eclipse：Help-&gt;Install New Software-&gt;Work with:Update Site - <a href="http://eclipse-color-theme.github.com/update" target="_blank" rel="noopener">http://eclipse-color-theme.github.com/update</a><br>MyEclipse：Help-&gt;MyEclipse Confrontation Center-&gt;Software-&gt;add site-&gt;输入name:ColorTheme,URL:<a href="http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal" target="_blank" rel="noopener">http://eclipse-color-theme.github.com/update-&gt;点击OK-&gt;在Personal</a> Sites下的Eclipse Color Theme下的Eclipse Color Theme右键Add to Profile-&gt;等待五分钟安装插件的时间-&gt;点击右下角的apply changes</p>
-<p>安装的过程中发生了错误，不过貌似没事，顺利安装好了，有点奇怪。<br>安装后需要重启Eclipse。重启后打开Window-&gt;Preferences-&gt;General-&gt;Apperance-&gt;Color Theme(未安装插件前是没有这个选项的)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-03-15-eclipse-huan-jing-pei-zhi/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-04-08-shu-ju-ku-cao-zuo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-04-08-shu-ju-ku-cao-zuo/">数据库操作</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2015-04-08-shu-ju-ku-cao-zuo/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>MySQL添加用户、删除用户与授权<br>MySql中添加用户,新建数据库,用户授权,删除用户,修改密码(注意每行后边都跟个;表示一个命令语句结束):</p>
-<p>1.新建用户</p>
-<p>　　1.1 登录MYSQL：</p>
-<p>　　@&gt;mysql -u root -p</p>
-<p>　　@&gt;密码</p>
-<p>　　1.2 创建用户：</p>
-<p>　　mysql&gt; insert into mysql.user(Host,User,Password) values(“localhost”,”test”,password(“1234”));</p>
-<p>　　这样就创建了一个名为：test 密码为：1234 的用户。</p>
-<p>　　注意：此处的”localhost”，是指该用户只能在本地登录，不能在另外一台机器上远程登录。如果想远程登录的话，将”localhost”改为”%”，表示在任何一台电脑上都可以登录。也可以指定某台机器可以远程登录。</p>
-<p>　　1.3 然后登录一下：</p>
-<p>　　mysql&gt;exit;</p>
-<p>　　@&gt;mysql -u test -p</p>
-<p>　　@&gt;输入密码</p>
-<p>　　mysql&gt;登录成功</p>
-<p>2.为用户授权</p>
-<p>　　授权格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
-<p>　　2.1 登录MYSQL（有ROOT权限），这里以ROOT身份登录：</p>
-<p>　　@&gt;mysql -u root -p</p>
-<p>　　@&gt;密码</p>
-<p>　　2.2 首先为用户创建一个数据库(testDB)：</p>
-<p>　　mysql&gt;create database testDB;</p>
-<p>　　2.3 授权test用户拥有testDB数据库的所有权限（某个数据库的所有权限）：</p>
-<p>　　 mysql&gt;grant all privileges on testDB.* to test@localhost identified by ‘1234’;</p>
-<p> 　　mysql&gt;flush privileges;//刷新系统权限表</p>
-<p>　　格式：grant 权限 on 数据库.* to 用户名@登录主机 identified by “密码”;　</p>
-<p>　　2.4 如果想指定部分权限给一用户，可以这样来写:</p>
-<p>　　mysql&gt;grant select,update on testDB.* to test@localhost identified by ‘1234’;</p>
-<p>　　mysql&gt;flush privileges; //刷新系统权限表</p>
-<p>　　2.5 授权test用户拥有所有数据库的某些权限： 　 </p>
-<p>　　mysql&gt;grant select,delete,update,create,drop on <em>.</em> to test@”%” identified by “1234”;</p>
-<pre><code>//test用户对所有数据库都有select,delete,update,create,drop 权限。
-</code></pre><p>　 //@”%” 表示对所有非本地主机授权，不包括localhost。（localhost地址设为127.0.0.1，如果设为真实的本地地址，不知道是否可以，没有验证。）</p>
-<p>　//对localhost授权：加上一句grant all privileges on testDB.* to test@localhost identified by ‘1234’;即可。</p>
-<ol start="3">
-<li><p>删除用户</p>
-<p>　　@&gt;mysql -u root -p</p>
+        <p>　</p>
+<p>完美讲解：</p>
+<p><a href="http://blog.panlin.me/posts/2015-07-19-digitalocean-shadowsocks-openvpn.html" target="_blank" rel="noopener">http://blog.panlin.me/posts/2015-07-19-digitalocean-shadowsocks-openvpn.html</a></p>
+<p>－－－－－－－－－－－－－－aws尝试后有时候比较慢，自行选择－－－－－－－－－－－－－－－－－－－－－－－－<br>aws日本的机器是可以开免费机器的。免费1年。<br>　日本上google还是嗖嗖的。。。</p>
+<p>###aws注册账号，开免费主机</p>
+<ol>
+<li><p>注册账号<br>中文的。注册过程就免了吧？<a href="https://aws.amazon.com/cn/free/explain/" target="_blank" rel="noopener">https://aws.amazon.com/cn/free/explain/</a></p>
+</li>
+<li><p>创建免费主机<br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-1%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-2%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-3%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-4%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-5%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-6%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-7%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-8%402x.png" alt><br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-8%402x.png" alt><br>最后一步是下载你的sshkey。用于登陆用，下载后点击启动实例<br>然后点击查看实例，可以看到ip<br><img src="http://7u2qnb.com1.z0.glb.clouddn.com/imagesQQ20160417-10%402x.png" alt></p>
+<p>然后通过ssh工具和下载的key登陆(别的工具类似)</p>
 </li>
 </ol>
-<p>　　@&gt;密码</p>
-<p> 　　mysql&gt;Delete FROM user Where User=’test’ and Host=’localhost’;</p>
-<p> 　　mysql&gt;flush privileges;</p>
-<p> 　　mysql&gt;drop database testDB; //删除用户的数据库</p>
-<p>删除账户及权限：&gt;drop user 用户名@’%’;</p>
-<p>　　　　　　　　&gt;drop user 用户名@ localhost; </p>
-<ol start="4">
-<li><p>修改指定用户密码</p>
-<p>　　@&gt;mysql -u root -p</p>
-<p>　　@&gt;密码</p>
-<p>　　mysql&gt;update mysql.user set password=password(‘新密码’) where User=”test” and Host=”localhost”;</p>
-<p>　　mysql&gt;flush privileges;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod 400 ssh-key.pem</span><br><span class="line">ssh -i ssh-key.pem ubuntu@ip</span><br></pre></td></tr></table></figure>
+<p>###在主机上部署代理shadowsocks</p>
+<ol>
+<li><p>安装docker  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行服务<br>$SSPASSWORD 替换为你的密码，端口是59001(可自定义)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 59001:1984 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1984 -k $SSPASSWORD -m aes-256-cfb</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol start="5">
-<li>列出所有数据库</li>
-</ol>
-<p>　　mysql&gt;show database;</p>
-<ol start="6">
-<li>切换数据库</li>
-</ol>
-<p>　　mysql&gt;use ‘数据库名’;</p>
-<ol start="7">
-<li>列出所有表</li>
-</ol>
-<p>　　mysql&gt;show tables;</p>
-<ol start="8">
-<li>显示数据表结构</li>
-</ol>
-<p>　　mysql&gt;describe 表名;</p>
-<ol start="9">
-<li>删除数据库和数据表</li>
-</ol>
-<p>　　mysql&gt;drop database 数据库名;</p>
-<p>　　mysql&gt;drop table 数据表名;</p>
+<p>###客户端安装shadowsocks使用</p>
+<p><strong>客户端</strong> </p>
+<ul>
+<li><p>mac:<br><a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-%E5%B8%AE%E5%8A%A9" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-%E5%B8%AE%E5%8A%A9</a> </p>
+</li>
+<li><p>windows:<br><a href="https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E</a></p>
+</li>
+</ul>
+<p>可以参考这个 <a href="http://www.ishadowsocks.net/" target="_blank" rel="noopener">http://www.ishadowsocks.net/</a><br>但服务器ip和端口，设置为你的服务器ip和端口<br>好啦，一年可以用了</p>
 
       
 
@@ -592,7 +352,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-04-08-shu-ju-ku-cao-zuo/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/04/17/hong-xing-chu-qiang/">展开全文 >></a>
         </p>
       
 
@@ -622,50 +382,164 @@
 
 
   
-    <article id="post-2015-2015-04-11-jar-logger-wen-ti" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ssl-error-cert_untrusted-while-using-npm-command" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-04-11-jar-logger-wen-ti/">jar logger 问题</a>
+      <a class="article-title" href="/2015/07/16/ssl-error-cert_untrusted-while-using-npm-command/">SSL Error: CERT_UNTRUSTED while using npm command</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-04-11-jar-logger-wen-ti/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.716Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2015/07/16/ssl-error-cert_untrusted-while-using-npm-command/" class="archive-article-date">
+  	<time datetime="2015-07-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>因为jar一般是作为别的项目依赖，所以最好不要直接指定日志的实现。  </p>
-<ul>
-<li>之前写项目，一般是加个logback什么的，再加个配置文件就可以输出log了，但现在是做成jar,就不能乱玩了，否则别人依赖后怎么控制你的日志输出呢？</li>
-</ul>
-<h3 id="slf4j"><a href="#slf4j" class="headerlink" title="slf4j"></a>slf4j</h3><p>百度了下，才知道slf4j，它提供一个标准的logger api,本身不提供log的实现，是具体运行的项目的时候再去知道，（详细百度‘slf4j’）<br>so,只需要加上这个就解决问题了。</p>
-<ul>
-<li>同时，为了测试输出日志，可以添加slf4j-simple，maven项目可以加只限于test的时候使用，这样打包完成后，是没有指定日志实现的，具体的实现交给用户选择。  </li>
-</ul>
-<p>如下：</p>
-<pre><code>&lt;!-- Logging with SLF4J --&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
-        &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
-        &lt;version&gt;1.7.7&lt;/version&gt;
-    &lt;/dependency&gt;
+        <p>see :<a href="http://stackoverflow.com/questions/21855035/ssl-error-cert-untrusted-while-using-npm-command" target="_blank" rel="noopener">http://stackoverflow.com/questions/21855035/ssl-error-cert-untrusted-while-using-npm-command</a><br>I am trying to install express framework using npm command but getting following error.</p>
+<p>error message is<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">E:\myFindings\nodejs_programs\node&gt;npm install -g express</span><br><span class="line">npm http GET https://registry.npmjs.org/express</span><br><span class="line">npm ERR! Error: SSL Error: CERT_UNTRUSTED</span><br><span class="line">npm ERR!     at ClientRequest.&lt;anonymous&gt; (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:409:26)</span><br><span class="line">npm ERR!     at ClientRequest.g (events.js:185:14)</span><br><span class="line">npm ERR!     at ClientRequest.EventEmitter.emit (events.js:88:17)</span><br><span class="line">npm ERR!     at HTTPParser.parserOnIncomingClient [as onIncoming] (http.js:1445:7)</span><br><span class="line">npm ERR!     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:111:23)</span><br><span class="line">npm ERR!     at CleartextStream.socketOnData [as ondata] (http.js:1356:20)</span><br><span class="line">npm ERR!     at CleartextStream.CryptoStream._push (tls.js:396:27)</span><br><span class="line">npm ERR!     at SecurePair.cycle (tls.js:751:20)</span><br><span class="line">npm ERR!     at EncryptedStream.CryptoStream.write (tls.js:131:13)</span><br><span class="line">npm ERR!     at Socket.ondata (stream.js:38:26)</span><br><span class="line">npm ERR!  [Error: SSL Error: CERT_UNTRUSTED]</span><br><span class="line">npm ERR! You may report this log at:</span><br><span class="line">npm ERR!     &lt;http://github.com/isaacs/npm/issues&gt;</span><br><span class="line">npm ERR! or email it to:</span><br><span class="line">npm ERR!     &lt;npm-@googlegroups.com&gt;</span><br><span class="line"></span><br><span class="line">npm ERR! System Windows_NT 6.1.7601</span><br><span class="line">npm ERR! command &quot;C:\\Program Files\\nodejs\\\\node.exe&quot; &quot;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js&quot; &quot;install&quot; &quot;-g&quot; &quot;express&quot;</span><br><span class="line">npm ERR! cwd E:\myFindings\nodejs_programs\node</span><br><span class="line">npm ERR! node -v v0.8.0</span><br><span class="line">npm ERR! npm -v 1.1.32</span><br><span class="line">npm ERR! message SSL Error: CERT_UNTRUSTED</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! Additional logging details can be found in:</span><br><span class="line">npm ERR!     E:\myFindings\nodejs_programs\node\npm-debug.log</span><br><span class="line">npm ERR! not ok code 0</span><br><span class="line">help me to sort out</span><br></pre></td></tr></table></figure></p>
+<p>You can bypass https using below commands:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set strict-ssl false</span><br></pre></td></tr></table></figure></p>
+<p>or set the registry URL from https or http like below:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=&quot;http://registry.npmjs.org/&quot;</span><br></pre></td></tr></table></figure></p>
+<p>However, Personally I believe bypassing https is not the real solution, but we can use it as a workaround.</p>
 
-    &lt;!-- 测试使用 --&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
-        &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
-        &lt;version&gt;1.7.7&lt;/version&gt;
-        &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;
-</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/16/ssl-error-cert_untrusted-while-using-npm-command/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nginx-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/13/nginx-2/">nginx https</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/13/nginx-2/" class="archive-article-date">
+  	<time datetime="2015-07-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/13/nginx-2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu-vim-she-zhi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/04/ubuntu-vim-she-zhi/">ubuntu vim 设置</a>
+    </h1>
+  
+
+        
+        <a href="/2015/06/04/ubuntu-vim-she-zhi/" class="archive-article-date">
+  	<time datetime="2015-06-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在终端下使用vim进行编辑时，默认情况下，编辑的界面上是没有显示行号、语法高亮度显示、智能缩进等功能的。为了更好的在vim下进行工作，需要手动设置一个配置文件：.vimrc。<br>在启动vim时，当前用户根目录下的.vimrc文件会被自动读取，该文件可以包含一些设置甚至脚本，所以，一般情况下把.vimrc文件创建在当前用户的根目录下比较方便，即创建的命令为：<br>$vi ~/.vimrc<br>设置完后<br>$:x 或者 $wq<br>进行保存退出即可。<br>下面给出一个例子，其中列出了经常用到的设置，详细的设置信息请参照参考资料：<br>“双引号开始的行为注释行，下同<br>“去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">set nocompatible  </span><br><span class="line">“显示行号  </span><br><span class="line">set nummber  </span><br><span class="line">“检测文件的类型  </span><br><span class="line"> filetype on  </span><br><span class="line">“记录历史的行数  </span><br><span class="line">  set history=1000  </span><br><span class="line">   “背景使用黑色  </span><br><span class="line">set background=dark  </span><br><span class="line">“语法高亮度显示  </span><br><span class="line">  syntax on  </span><br><span class="line"> </span><br><span class="line">“下面两行在进行编写代码时，在格式对起上很有用；  </span><br><span class="line">“第一行，vim使用自动对起，也就是把当前行的对起格式应用到下一行；  </span><br><span class="line">“第二行，依据上面的对起格式，智能的选择对起方式，对于类似C语言编  </span><br><span class="line">“写上很有用  </span><br><span class="line">set autoindent  </span><br><span class="line">set smartindent  </span><br><span class="line">“第一行设置tab键为4个空格，第二行设置当行之间交错时使用4个空格</span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">“设置匹配模式，类似当输入一个左括号时会匹配相应的那个右括号  </span><br><span class="line">set showmatch  </span><br><span class="line">“去除vim的GUI版本中的toolbar  </span><br><span class="line">set guioptions-=T  </span><br><span class="line">“当vim进行编辑时，如果命令错误，会发出一个响声，该设置去掉响声  </span><br><span class="line">set vb t_vb=  </span><br><span class="line">“在编辑过程中，在右下角显示光标位置的状态行  </span><br><span class="line">set ruler  </span><br><span class="line">“默认情况下，寻找匹配是高亮度显示的，该设置关闭高亮显示  </span><br><span class="line">set nohls  </span><br><span class="line">“查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一</span><br><span class="line">“个b开头的单词，当输入到/bo时，会自动找到第一个bo开头的单词，依</span><br><span class="line">“次类推，进行查找时，使用此设置会快速找到答案，当你找要匹配的单词</span><br><span class="line">“时，别忘记回车</span><br><span class="line">set incsearch</span><br><span class="line">“修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀</span><br><span class="line">if has(“vms”)</span><br><span class="line">   set nobackup</span><br><span class="line">else</span><br><span class="line">   set backup</span><br><span class="line">endif</span><br><span class="line"> </span><br><span class="line">如果去除注释后，一个完整的.vimrc配置信息如下所示：</span><br><span class="line"> </span><br><span class="line">set nocompatible</span><br><span class="line">set nummber</span><br><span class="line">filetype on</span><br><span class="line">set history=1000</span><br><span class="line">set background=dark</span><br><span class="line">syntax on</span><br><span class="line">set autoindent</span><br><span class="line">set smartindent</span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">set showmatch</span><br><span class="line">set guioptions-=T</span><br><span class="line">set vb t_vb=</span><br><span class="line">set ruler</span><br><span class="line">set nohls</span><br><span class="line">set incsearch</span><br><span class="line">if has(“vms”)</span><br><span class="line">   set nobackup</span><br><span class="line">else</span><br><span class="line">   set backup</span><br><span class="line">endif</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">如果设置完后，发现功能没有起作用，检查一下系统下是否安装了vim-enhanced包，查询命令为：</span><br><span class="line">$rpm –q vim-enhanced</span><br></pre></td></tr></table></figure></p>
+<p>参考资料：</p>
+<ol>
+<li>vim的完全翻译版在下面连接处可以找到<br><a href="http://vimcdoc.sourceforge.net/" target="_blank" rel="noopener">http://vimcdoc.sourceforge.net/</a><br>可以下栽其中的一个PDF版本，里面介绍的很详细，强烈推荐：）   </li>
+<li>更详细的vim信息可以访问：<br><a href="http://www.vim.org/" target="_blank" rel="noopener">http://www.vim.org/</a>   </li>
+<li>一个带有英文注释的.vimrc例子<br><a href="http://www.vi-improved.org/vimrc.php" target="_blank" rel="noopener">http://www.vi-improved.org/vimrc.php</a></li>
+</ol>
+
       
 
       
@@ -678,7 +552,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">jar logger, jar log</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ubuntu vim, vim设置, vim</a>
         		</li>
       		
 		</ul>
@@ -688,7 +562,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-04-11-jar-logger-wen-ti/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/06/04/ubuntu-vim-she-zhi/">展开全文 >></a>
         </p>
       
 
@@ -718,248 +592,63 @@
 
 
   
-    <article id="post-2015-2015-02-26-link" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-welcome-to-ghost-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-02-26-link/">link</a>
+      <a class="article-title" href="/2015/06/03/welcome-to-ghost-2/">Welcome to Ghost</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-02-26-link/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.715Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2015/06/03/welcome-to-ghost-2/" class="archive-article-date">
+  	<time datetime="2015-06-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#####软连接<br>    ‘ln -s 源文件（目录） 目标文件（目录）’</p>
-<p>#####硬链接<br>     ‘ln -d 源文件（目录） 目标文件（目录）’</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-02-26-link/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-2015-02-26-nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-02-26-nginx/">nginx</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/30/2015-2015-02-26-nginx/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.715Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#安装<br><strong>ubuntu</strong><br>    <code>apt-get install nginx</code></p>
-<p>#配置</p>
-<p>##/etc/nginx/agin.conf<br>    `##nginx</p>
-<pre><code>#使用的用户和组
-user www-data; 
-
-#指定工作衍生进程数（一般等于CPU总核数或总核数的两倍）
-worker_processes 4;
-
-#指定PID存放的路径
-pid /run/nginx.pid;
-
-#指定文件描述符数量
-worker_rlimit_nofile 51200;
-
-events {
-#使用的网络I/O模型，linux戏台推荐采用epoll模型，freebsd系统采用kqueue模型
-use epoll;
-
-#允许最大连接数
-worker_connections 51200;
-# multi_accept on;
+        <p>You’re live! Nice. We’ve put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at <code>&lt;your blog URL&gt;/ghost/</code>. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Ghost uses something called Markdown for writing. Essentially, it’s a shorthand way to manage your post formatting as you write!</p>
+<p>Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use <em>shortcuts</em> to <strong>style</strong> your content. For example, a list:</p>
+<ul>
+<li>Item number one</li>
+<li>Item number two<ul>
+<li>A nested item</li>
+</ul>
+</li>
+<li>A final item</li>
+</ul>
+<p>or with numbers!</p>
+<ol>
+<li>Remember to buy some milk</li>
+<li>Drink the milk</li>
+<li>Tweet that I remembered to buy the milk, and drank it</li>
+</ol>
+<h3 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h3><p>Want to link to a source? No problem. If you paste in a URL, like <a href="http://ghost.org" target="_blank" rel="noopener">http://ghost.org</a> - it’ll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here’s a link to <a href="http://ghost.org" target="_blank" rel="noopener">the Ghost website</a>. Neat.</p>
+<h3 id="What-about-Images"><a href="#What-about-Images" class="headerlink" title="What about Images?"></a>What about Images?</h3><p>Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:</p>
+<p><img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"></p>
+<p>Not sure which image you want to use yet? That’s ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:</p>
+<p>![A bowl of bananas]</p>
+<h3 id="Quoting"><a href="#Quoting" class="headerlink" title="Quoting"></a>Quoting</h3><p>Sometimes a link isn’t enough, you want to quote someone on what they’ve said. It was probably very wisdomous. Is wisdomous a word? Find out in a future release when we introduce spellcheck! For now - it’s definitely a word.</p>
+<blockquote>
+<p>Wisdomous - it’s definitely a word.</p>
+</blockquote>
+<h3 id="Working-with-Code"><a href="#Working-with-Code" class="headerlink" title="Working with Code"></a>Working with Code</h3><p>Got a streak of geek? We’ve got you covered there, too. You can write inline <code>&lt;code&gt;</code> blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.</p>
+<pre><code>.awesome-thing {
+    display: block;
+    width: 100%;
 }
+</code></pre><h3 id="Ready-for-a-Break"><a href="#Ready-for-a-Break" class="headerlink" title="Ready for a Break?"></a>Ready for a Break?</h3><p>Throw 3 or more dashes down on any new line and you’ve got yourself a fancy new divider. Aw yeah.</p>
+<hr>
+<h3 id="Advanced-Usage"><a href="#Advanced-Usage" class="headerlink" title="Advanced Usage"></a>Advanced Usage</h3><p>There’s one fantastic secret about Markdown. If you want, you can write plain old HTML and it’ll still work! Very flexible.</p>
+<input type="text" placeholder="I'm an input field!">
 
-http {
-
-##
-# 基础设置
-##
-
-sendfile on;
-tcp_nopush on;
-tcp_nodelay on;
-keepalive_timeout 65;
-types_hash_max_size 2048;
-# server_tokens off;
-
-server_names_hash_bucket_size 128;
-# server_name_in_redirect off;
-
-include /etc/nginx/mime.types;
-default_type application/octet-stream;
-
-##
-# 日志设置
-##
-
-#指定错误日志存放路径数， 错误日志记录的级别可选项为：[debug|info|notice|warn|error|crit]
-access_log /var/log/nginx/access.log;
-error_log /var/log/nginx/error.log;
-
-##
-# 压缩设置
-##
-
-gzip on;
-gzip_disable &quot;msie6&quot;;
-
-gzip_vary on;
-# gzip_proxied any;
-gzip_comp_level 2;
-gzip_buffers 4 16k;
-gzip_http_version 1.1;
-gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
-
-##
-# nginx-naxsi config
-##
-# Uncomment it if you installed nginx-naxsi
-##
-
-#include /etc/nginx/naxsi_core.rules;
-
-##
-# nginx-passenger config
-##
-# Uncomment it if you installed nginx-passenger
-##
-
-#passenger_root /usr;
-#passenger_ruby /usr/bin/ruby;
-
-##
-# 虚拟主机设置
-##
-
-include /etc/nginx/conf.d/*.conf;
-include /etc/nginx/sites-enabled/*;
-}
-
-
-#mail {
-#    # See sample authentication script at:
-#    # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
-# 
-#    # auth_http localhost/auth.php;
-#    # pop3_capabilities &quot;TOP&quot; &quot;USER&quot;;
-#    # imap_capabilities &quot;IMAP4rev1&quot; &quot;UIDPLUS&quot;;
-# 
-#    server {
-#        listen     localhost:110;
-#        protocol   pop3;
-#        proxy      on;
-#    }
-# 
-#    server {
-#        listen     localhost:143;
-#        protocol   imap;
-#        proxy      on;
-#    }
-#}`
-</code></pre><p>##/etc/nginx/sites-available/default</p>
-<pre><code>#主机
-  server {
-  listen 80;
-  server_name www.demo.com;
-  root /home/zxl/wwwroot/demo/;
-  index index.php index.html index.htm;
-
-  #如果没有可访问目录或文件
-  if (!-e $request_filename) {
-      #将访问路径跳转至根目录下的index.php接受处理
-      rewrite  ^/(.*)$  /index.php/$1  last;
-      break;
-  }
-
-  #处理请求路径满足匹配 .php  的响应
-  location ~ \.php
-  {
-      #响应请求处理入口，使用php-fpm进行管理
-      fastcgi_pass unix:/var/run/php5-fpm.sock;
-
-      fastcgi_index index.php;
-      fastcgi_split_path_info ^(.+\.php)(.*)$;
-      fastcgi_param PATH_INFO $fastcgi_path_info;
-      fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
-      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-      include fastcgi_params;
-  }
-
-  #配置静态图片文件客户端缓存时间
-  location ~ .*\.(gif|jgp|jpeg|png|bmp|swf)$
-  {
-      expires 30d; #30天
-  }
-
-  #配置js、css文件客户端缓存时间
-  location ~ .*\.(js|css)?$
-  {
-      expires 1h; #1小时
-  }
-
-  #设置访问日志保存格式
-  #log_format access &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos; &apos;$status $body_bytes_sent &quot;$http_referer&quot;&apos; &apos;&quot;$http_user_agent&quot; $http_x_forwarded_for&apos;;
-
-  #设置访问日志保存路径
-  #access_log /var/log/nginx/access.log access;
-</code></pre><p>  }</p>
+<p>That should be enough to get you started. Have fun - and let us know what you think :)</p>
 
       
 
@@ -968,11 +657,22 @@ include /etc/nginx/sites-enabled/*;
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Getting Started</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-02-26-nginx/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/06/03/welcome-to-ghost-2/">展开全文 >></a>
         </p>
       
 
@@ -1002,30 +702,28 @@ include /etc/nginx/sites-enabled/*;
 
 
   
-    <article id="post-2015-2015-02-26-ghost-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-eclipseshe-zhi-de-duan-dian-wu-xiao-de-jie-jue-fang-an" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/30/2015-2015-02-26-ghost-post/">ghost安装配置</a>
+      <a class="article-title" href="/2015/04/30/eclipseshe-zhi-de-duan-dian-wu-xiao-de-jie-jue-fang-an/">eclipse设置的断点无效的解决方案</a>
     </h1>
   
 
         
-        <a href="/2019/09/30/2015-2015-02-26-ghost-post/" class="archive-article-date">
-  	<time datetime="2019-09-30T02:36:16.714Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+        <a href="/2015/04/30/eclipseshe-zhi-de-duan-dian-wu-xiao-de-jie-jue-fang-an/" class="archive-article-date">
+  	<time datetime="2015-04-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>安装</strong><br><a href="http://www.ghostchina.com/install-ghost-on-ali-ecs-forth-step-install-ghost/" target="_blank" rel="noopener">http://www.ghostchina.com/install-ghost-on-ali-ecs-forth-step-install-ghost/</a></p>
-<p><strong>加速</strong><br><a href="http://www.ghostchina.com/let-nginx-serve-static-files-for-your-ghost-blog/" target="_blank" rel="noopener">http://www.ghostchina.com/let-nginx-serve-static-files-for-your-ghost-blog/</a></p>
-<p><strong>使用mysql存储数据</strong><br>安装mysql <a href="http://www.ghostchina.com/install-ghost-on-ali-ecs-third-step-install-mysql/" target="_blank" rel="noopener">http://www.ghostchina.com/install-ghost-on-ali-ecs-third-step-install-mysql/</a><br><a href="http://www.ghostchina.com/migrating-ghost-installation-from-sqlite3-to-mysql-database/" target="_blank" rel="noopener">http://www.ghostchina.com/migrating-ghost-installation-from-sqlite3-to-mysql-database/</a></p>
-<p><strong>nginx 安装</strong><br><a href="http://www.ghostchina.com/install-ghost-on-ali-ecs-second-step-install-nginx/" target="_blank" rel="noopener">http://www.ghostchina.com/install-ghost-on-ali-ecs-second-step-install-nginx/</a></p>
+        <p>如果你是英文版的，那么可以通过Run——Skip All Breakpoints来搞定，就是取消你“跳过所有断点”的设置。<br>为什么会这样，很可能是哪次你手太快太慌，点错了。</p>
+<p><a href="http://huangqiqing123.iteye.com/blog/1583435" target="_blank" rel="noopener">http://huangqiqing123.iteye.com/blog/1583435</a></p>
 
       
 
@@ -1038,7 +736,140 @@ include /etc/nginx/sites-enabled/*;
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/30/2015-2015-02-26-ghost-post/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/04/30/eclipseshe-zhi-de-duan-dian-wu-xiao-de-jie-jue-fang-an/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu-top-mem-free" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/28/ubuntu-top-mem-free/">ubuntu top mem free</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/28/ubuntu-top-mem-free/" class="archive-article-date">
+  	<time datetime="2015-04-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每次看top都发现free 都很小，百度了下，说这个是未分配的值，不是内存剩余，不用担心。迷迷糊糊，后台再查吧</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/28/ubuntu-top-mem-free/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ngrok-hou-tai-yun-xing" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/24/ngrok-hou-tai-yun-xing/">ngrok 后台运行</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/24/ngrok-hou-tai-yun-xing/" class="archive-article-date">
+  	<time datetime="2015-04-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ngrok的安装使用就不说了，官网上的很简单，也可以百度下  </p>
+<p>关于让他后台运行谷歌了半天，找到了个不错的解决方法  </p>
+<p>启动的时候这样启动  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ngrok -log=stdout &gt; ngrok.log start  test1 test2 &amp;</span><br></pre></td></tr></table></figure>
+<p>我的.ngrok 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tunnels:</span><br><span class="line">  test1:</span><br><span class="line">    proto:</span><br><span class="line">      http: 80</span><br><span class="line">  config:</span><br><span class="line">    proto:</span><br><span class="line">      http: 4040</span><br><span class="line">  test2:</span><br><span class="line">    proto:</span><br><span class="line">      tcp: 22</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><a href="https://github.com/inconshreveable/ngrok/issues/57" target="_blank" rel="noopener">https://github.com/inconshreveable/ngrok/issues/57</a></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/24/ngrok-hou-tai-yun-xing/">展开全文 >></a>
         </p>
       
 
